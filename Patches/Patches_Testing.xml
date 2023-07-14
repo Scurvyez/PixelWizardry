@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!--========== RefulgentArrow Testing ==========-->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CCW"]</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CW"]</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Particle_RefulgentArrow_Ring"]</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_RefulgentArrow"]/shaderType</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Base"]/shaderType</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Pulse"]/shaderType</xpath>
+        <value>
+			<shaderType>PWLinearDodge</shaderType>
+		</value>
+    </Operation>
+
+    <!--========== RefulgentArrow Testing ==========-->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_SpellFlash_BurstShot"]</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_BurstShot"]/shaderType</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_BurstShot_Sparks"]/shaderType</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Blue"]/shaderType</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Purple"]/shaderType</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Pulse"]/shaderType</xpath>
+        <value>
+			<shaderType>PWScreenPulse</shaderType>
+		</value>
+    </Operation>
+
+</Patch>

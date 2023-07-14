@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 3615714473
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7737150c59b96b1ccb2f73c53b0a12c6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/TransparentPulse.shader
+- Assets/LinearDodge.shader
+- Assets/ScreenPulse.shader
+- Assets/LinearBurn.shader
+- Assets/TransparentRGBToBlackPulse.shader
+- Assets/Multiply.shader
+- Assets/LinearDodgePulse.shader
+- Assets/Screen.shader
+- Assets/TransparentRGBToBlack.shader
+- Assets/Subtract.shader
+- Assets/SubtractPulse.shader
+Dependencies: []

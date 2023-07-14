@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWLinearDodge</defName>
+		<shaderPath>LinearDodge</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWLinearDodgePulse</defName>
+		<shaderPath>LinearDodgePulse</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWSubtract</defName>
+		<shaderPath>Subtract</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWSubtractPulse</defName>
+		<shaderPath>SubtractPulse</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWScreen</defName>
+		<shaderPath>Screen</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWScreenPulse</defName>
+		<shaderPath>ScreenPulse</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWMultiply</defName>
+		<shaderPath>Multiply</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWLinearBurn</defName>
+		<shaderPath>LinearBurn</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWTransparentRGBToBlack</defName>
+		<shaderPath>TransparentRGBToBlack</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWRGBTransparentRGBToBlackPulse</defName>
+		<shaderPath>RGBTransparentRGBToBlackPulse</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWTransparentPulse</defName>
+		<shaderPath>TransparentPulse</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+  
+</Defs>
