@@ -6,42 +6,42 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CCW"]</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CW"]</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Particle_RefulgentArrow_Ring"]</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_RefulgentArrow"]/shaderType</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Base"]/shaderType</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Pulse"]/shaderType</xpath>
         <value>
-			<shaderType>PWLinearDodge</shaderType>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 

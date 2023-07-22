@@ -22,7 +22,8 @@ namespace PixelWizardry
         public static readonly Shader TransparentRGBToBlackPulse = LoadShader(Path.Combine("Assets", "TransparentRGBToBlackPulse.shader"));
         public static readonly Shader ScreenPulse = LoadShader(Path.Combine("Assets", "ScreenPulse.shader"));
         public static readonly Shader TransparentPulse = LoadShader(Path.Combine("Assets", "TransparentPulse.shader"));
-        
+        public static readonly Shader TransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "TransparentRGBToGrayscale.shader"));
+
         public static AssetBundle PWBundle
         {
             get

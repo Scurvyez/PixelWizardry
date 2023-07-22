@@ -55,5 +55,10 @@
 		<defName>PWTransparentPulse</defName>
 		<shaderPath>TransparentPulse</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWTransparentRGBToGrayscale</defName>
+		<shaderPath>TransparentRGBToGrayscale</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
   
 </Defs>
