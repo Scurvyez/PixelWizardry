@@ -19,10 +19,10 @@ namespace PixelWizardry
         public static readonly Shader LinearDodgePulse = LoadShader(Path.Combine("Assets", "LinearDodgePulse.shader"));
         public static readonly Shader SubtractPulse = LoadShader(Path.Combine("Assets", "SubtractPulse.shader"));
         public static readonly Shader TransparentRGBToBlack = LoadShader(Path.Combine("Assets", "TransparentRGBToBlack.shader"));
-        public static readonly Shader TransparentRGBToBlackPulse = LoadShader(Path.Combine("Assets", "TransparentRGBToBlackPulse.shader"));
         public static readonly Shader ScreenPulse = LoadShader(Path.Combine("Assets", "ScreenPulse.shader"));
         public static readonly Shader TransparentPulse = LoadShader(Path.Combine("Assets", "TransparentPulse.shader"));
         public static readonly Shader TransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "TransparentRGBToGrayscale.shader"));
+        public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
 
         public static AssetBundle PWBundle
         {
@@ -56,7 +56,7 @@ namespace PixelWizardry
             }
             if (shader != null)
             {
-                Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] Loaded shader: " + shaderName);
+                //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] Loaded shaders: " + lookupShaders.Count );
             }
             return shader;
         }

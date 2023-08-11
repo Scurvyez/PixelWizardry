@@ -47,11 +47,6 @@
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWRGBTransparentRGBToBlackPulse</defName>
-		<shaderPath>RGBTransparentRGBToBlackPulse</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWTransparentPulse</defName>
 		<shaderPath>TransparentPulse</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
@@ -59,6 +54,11 @@
 	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWTransparentRGBToGrayscale</defName>
 		<shaderPath>TransparentRGBToGrayscale</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWRGBToHSV</defName>
+		<shaderPath>RGBToHSV</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
   
 </Defs>

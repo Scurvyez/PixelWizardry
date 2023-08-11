@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1799064386
+CRC: 3058384710
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9148653ba37059f0340f4663803ecf77
+    Hash: 6889bef377bee521eabb4b948e428aeb
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -17,9 +17,9 @@ Assets:
 - Assets/LinearDodge.shader
 - Assets/ScreenPulse.shader
 - Assets/LinearBurn.shader
-- Assets/TransparentRGBToBlackPulse.shader
 - Assets/Multiply.shader
 - Assets/LinearDodgePulse.shader
+- Assets/RGBToHSV.shader
 - Assets/TransparentRGBToGrayscale.shader
 - Assets/Screen.shader
 - Assets/TransparentRGBToBlack.shader
