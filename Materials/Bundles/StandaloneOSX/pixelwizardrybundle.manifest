@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3338694313
+CRC: 3229524876
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bcfb3ff507df9441f450b487d1842931
+    Hash: c58f99e100a4bd38afdb084b45122f58
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -18,11 +18,15 @@ Assets:
 - Assets/ScreenPulse.shader
 - Assets/LinearBurn.shader
 - Assets/Multiply.shader
+- Assets/MultiplyMasked.shader
 - Assets/LinearDodgePulse.shader
 - Assets/RGBToHSV.shader
 - Assets/TransparentRGBToGrayscale.shader
 - Assets/Screen.shader
+- Assets/Tritanomaly.shader
 - Assets/TransparentRGBToBlack.shader
+- Assets/CutoutComplexVariable.shader
+- Assets/ColorBlindness.shader
 - Assets/Subtract.shader
 - Assets/SubtractPulse.shader
 Dependencies: []

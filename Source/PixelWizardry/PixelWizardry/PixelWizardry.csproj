@@ -59,8 +59,19 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Harmony\SkyManagerCurrentSkyTarget_Postfix.cs" />
+    <Compile Include="Harmony\PlaySettingsDoPlaySettingsGlobalControls_Postfix.cs" />
+    <Compile Include="Map\MapComponent_BetterMiningHelmet.cs" />
+    <Compile Include="Map\MapComponent_RadialGradiantChanges.cs" />
+    <Compile Include="Map\SectionLayer_RadialGradialChanges.cs" />
+    <Compile Include="Utils\PWColorUtility.cs" />
+    <Compile Include="Utils\TexButtons.cs" />
     <Compile Include="Harmony\PostFix_MatFrom.cs" />
     <Compile Include="PWMod.cs" />
     <Compile Include="Utils\CompProperties_ExtraGraphics.cs" />

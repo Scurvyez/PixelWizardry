@@ -23,7 +23,10 @@ namespace PixelWizardry
                 || __result.shader == PWContentDatabase.ScreenPulse
                 || __result.shader == PWContentDatabase.TransparentPulse
                 || __result.shader == PWContentDatabase.TransparentRGBToGrayscale
-                || __result.shader == PWContentDatabase.RGBToHSV))
+                || __result.shader == PWContentDatabase.RGBToHSV
+                || __result.shader == PWContentDatabase.ColorBlindness
+                || __result.shader == PWContentDatabase.CutoutComplexVariable
+                || __result.shader == PWContentDatabase.MultiplyMasked))
             {
                 //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] MatFrom_Patch: Material shader = " + __result.shader.name);
                 WindManager.Notify_PlantMaterialCreated(__result);

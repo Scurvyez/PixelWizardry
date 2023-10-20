@@ -23,6 +23,9 @@ namespace PixelWizardry
         public static readonly Shader TransparentPulse = LoadShader(Path.Combine("Assets", "TransparentPulse.shader"));
         public static readonly Shader TransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "TransparentRGBToGrayscale.shader"));
         public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
+        public static readonly Shader ColorBlindness = LoadShader(Path.Combine("Assets", "ColorBlindness.shader"));
+        public static readonly Shader CutoutComplexVariable = LoadShader(Path.Combine("Assets", "CutoutComplexVariable.shader"));
+        public static readonly Shader MultiplyMasked = LoadShader(Path.Combine("Assets", "MultiplyMasked.shader"));
 
         public static AssetBundle PWBundle
         {

@@ -60,5 +60,20 @@
 		<defName>PWRGBToHSV</defName>
 		<shaderPath>RGBToHSV</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWColorBlindness</defName>
+		<shaderPath>ColorBlindness</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWCutoutComplexVariable</defName>
+		<shaderPath>CutoutComplexVariable</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWMultiplyMasked</defName>
+		<shaderPath>MultiplyMasked</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
   
 </Defs>
