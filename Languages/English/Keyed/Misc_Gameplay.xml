@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!--==================== Settings ====================-->
+
+    <PW_ModName>Pixel Wizardry</PW_ModName>
+
+    <!-- UI -->
+    <PW_IntensityFactor>Color blindness intensity factor: {0}%</PW_IntensityFactor>
+    <PW_IntensityFactorDesc>Adjust to increase / decrease the intensity of the color blindness mode currently active.</PW_IntensityFactorDesc>
+
+</LanguageData>

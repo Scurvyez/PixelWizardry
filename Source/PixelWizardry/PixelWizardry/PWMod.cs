@@ -3,18 +3,20 @@ using Verse;
 using HarmonyLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System;
+using System.Runtime;
 
 namespace PixelWizardry
 {
     public class PWMod : Mod
     {
         public static PWMod mod;
-        //private static ColorBlindnessUtility.ColorBlindMode selectedColorBlindMode = ColorBlindnessUtility.ColorBlindMode.Normal;
+        PWModSettings settings;
 
         public PWMod(ModContentPack content) : base(content)
         {
             mod = this;
+            settings = GetSettings<PWModSettings>();
+
             var harmony = new Harmony("com.pixelwizardry");
 
             harmony.Patch(original: AccessTools.PropertyGetter(typeof(ShaderTypeDef), nameof(ShaderTypeDef.Shader)),
@@ -72,46 +74,55 @@ namespace PixelWizardry
             }
         }
 
-        /*
         public override void DoSettingsWindowContents(Rect inRect)
         {
             base.DoSettingsWindowContents(inRect);
 
             Listing_Standard list = new Listing_Standard();
+            Rect viewRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
+            list.Begin(viewRect);
 
-            list.Begin(inRect);
-            list.Label("Select Color Blindness Mode:");
+            // GENERAL SETTINGS
+            list.Label("<color=white>General</color>");
+            list.Gap(3.00f);
 
-            // Add options for color blindness modes
-            foreach (ColorBlindnessUtility.ColorBlindMode mode in Enum.GetValues(typeof(ColorBlindnessUtility.ColorBlindMode)))
-            {
-                bool isSelected = selectedColorBlindMode == mode;
-                if (list.RadioButton(mode.ToString(), isSelected))
-                {
-                    selectedColorBlindMode = mode;
-                }
-            }
+            int decimalPlaces = 2;
+
+            list.Label(label: "PW_IntensityFactor".Translate((10f * settings._IntensityFactor).ToString($"F{decimalPlaces}")), tooltip: "PW_IntensityFactorDesc".Translate());
+            settings._IntensityFactor = list.Slider(10f * settings._IntensityFactor, 0f, 10f) / 10f;
 
             list.End();
         }
 
         public override string SettingsCategory()
         {
-            return "Pixel Wizardry Mod Settings";
+            return "PW_ModName".Translate();
         }
-        */
     }
 
-    /*
     public class PWModSettings : ModSettings
     {
-        public ColorBlindnessUtility.ColorBlindMode SelectedColorBlindMode;
+        private static PWModSettings _instance;
+
+        public float _IntensityFactor = 1.0f;
+
+        public PWModSettings()
+        {
+            _instance = this;
+        }
+
+        public static float IntensityFactor
+        {
+            get
+            {
+                return _instance._IntensityFactor;
+            }
+        }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref SelectedColorBlindMode, "SelectedColorBlindMode", ColorBlindnessUtility.ColorBlindMode.Normal);
+            Scribe_Values.Look(ref _IntensityFactor, "_IntensityFactor", 1.0f);
         }
     }
-    */
 }

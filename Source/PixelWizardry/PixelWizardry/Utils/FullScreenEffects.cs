@@ -5,9 +5,11 @@ namespace PixelWizardry
     public class FullScreenEffects : MonoBehaviour
     {
         public Material material;
+        public static FullScreenEffects instance;
 
         public void Start()
         {
+            instance = this;
             material = new Material(PWContentDatabase.ScreenChangeColors);
         }
 
