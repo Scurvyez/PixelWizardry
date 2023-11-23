@@ -6,11 +6,7 @@
     <!-- <Operation Class="PatchOperationAdd">
         <xpath>Defs/PawnKindDef[defName="Bear_Grizzly"]/lifeStages/li/bodyGraphicData</xpath>
         <value>
-			<shaderType>PWRGBToHSV</shaderType>
-            <shaderParameters>
-                <_OscillationSpeed>0.5</_OscillationSpeed>
-                <_HueLerp>(0.23, 0.25, 0, 0)</_HueLerp>
-            </shaderParameters>
+			<shaderType>PWTransparentRGBToGrayscale</shaderType>
 		</value>
     </Operation>
 

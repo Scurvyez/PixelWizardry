@@ -16,17 +16,11 @@ namespace PixelWizardry
         public static readonly Shader Screen = LoadShader(Path.Combine("Assets", "Screen.shader"));
         public static readonly Shader Multiply = LoadShader(Path.Combine("Assets", "Multiply.shader"));
         public static readonly Shader LinearBurn = LoadShader(Path.Combine("Assets", "LinearBurn.shader"));
-        public static readonly Shader LinearDodgePulse = LoadShader(Path.Combine("Assets", "LinearDodgePulse.shader"));
-        public static readonly Shader SubtractPulse = LoadShader(Path.Combine("Assets", "SubtractPulse.shader"));
         public static readonly Shader TransparentRGBToBlack = LoadShader(Path.Combine("Assets", "TransparentRGBToBlack.shader"));
-        public static readonly Shader ScreenPulse = LoadShader(Path.Combine("Assets", "ScreenPulse.shader"));
-        public static readonly Shader TransparentPulse = LoadShader(Path.Combine("Assets", "TransparentPulse.shader"));
         public static readonly Shader TransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "TransparentRGBToGrayscale.shader"));
         public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
-        public static readonly Shader ColorBlindness = LoadShader(Path.Combine("Assets", "ColorBlindness.shader"));
-        public static readonly Shader CutoutComplexVariable = LoadShader(Path.Combine("Assets", "CutoutComplexVariable.shader"));
-        public static readonly Shader MultiplyMasked = LoadShader(Path.Combine("Assets", "MultiplyMasked.shader"));
-
+        public static readonly Shader ScreenChangeColors = LoadShader(Path.Combine("Assets", "ScreenChangeColors.shader"));
+        
         public static AssetBundle PWBundle
         {
             get

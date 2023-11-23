@@ -3,12 +3,14 @@ using Verse;
 using HarmonyLib;
 using System.Runtime.InteropServices;
 using System.IO;
+using System;
 
 namespace PixelWizardry
 {
     public class PWMod : Mod
     {
         public static PWMod mod;
+        //private static ColorBlindnessUtility.ColorBlindMode selectedColorBlindMode = ColorBlindnessUtility.ColorBlindMode.Normal;
 
         public PWMod(ModContentPack content) : base(content)
         {
@@ -69,5 +71,47 @@ namespace PixelWizardry
                 return bundle;
             }
         }
+
+        /*
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            base.DoSettingsWindowContents(inRect);
+
+            Listing_Standard list = new Listing_Standard();
+
+            list.Begin(inRect);
+            list.Label("Select Color Blindness Mode:");
+
+            // Add options for color blindness modes
+            foreach (ColorBlindnessUtility.ColorBlindMode mode in Enum.GetValues(typeof(ColorBlindnessUtility.ColorBlindMode)))
+            {
+                bool isSelected = selectedColorBlindMode == mode;
+                if (list.RadioButton(mode.ToString(), isSelected))
+                {
+                    selectedColorBlindMode = mode;
+                }
+            }
+
+            list.End();
+        }
+
+        public override string SettingsCategory()
+        {
+            return "Pixel Wizardry Mod Settings";
+        }
+        */
     }
+
+    /*
+    public class PWModSettings : ModSettings
+    {
+        public ColorBlindnessUtility.ColorBlindMode SelectedColorBlindMode;
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref SelectedColorBlindMode, "SelectedColorBlindMode", ColorBlindnessUtility.ColorBlindMode.Normal);
+        }
+    }
+    */
 }

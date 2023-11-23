@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using Verse;
+﻿using Verse;
 using UnityEngine;
 
 namespace PixelWizardry
@@ -14,8 +13,5 @@ namespace PixelWizardry
         public static readonly Texture2D RedMode = ContentFinder<Texture2D>.Get("UI/Buttons/RedMode");
         public static readonly Texture2D GreenMode = ContentFinder<Texture2D>.Get("UI/Buttons/GreenMode");
         public static readonly Texture2D BlueMode = ContentFinder<Texture2D>.Get("UI/Buttons/BlueMode");
-
-        public static readonly Texture2D RadialGradientChange = ContentFinder<Texture2D>.Get("Map/Effects/RadialGradientChange");
-        public static readonly Texture2D HeadLampTestingMask = ContentFinder<Texture2D>.Get("Map/Effects/HeadLampTestingMask");
     }
 }

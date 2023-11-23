@@ -1,11 +1,9 @@
 ﻿using HarmonyLib;
-using RimWorld;
-using System.Reflection;
-using UnityEngine;
 using Verse;
 
 namespace PixelWizardry
 {
+    /*
     [HarmonyPatch(typeof(SkyManager), "CurrentSkyTarget")]
     public static class SkyManagerCurrentSkyTarget_Postfix
     {
@@ -104,4 +102,5 @@ namespace PixelWizardry
             }
         }
     }
+    */
 }

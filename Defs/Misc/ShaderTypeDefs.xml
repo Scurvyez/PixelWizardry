@@ -7,28 +7,13 @@
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWLinearDodgePulse</defName>
-		<shaderPath>LinearDodgePulse</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWSubtract</defName>
 		<shaderPath>Subtract</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWSubtractPulse</defName>
-		<shaderPath>SubtractPulse</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWScreen</defName>
 		<shaderPath>Screen</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWScreenPulse</defName>
-		<shaderPath>ScreenPulse</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
@@ -47,11 +32,6 @@
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWTransparentPulse</defName>
-		<shaderPath>TransparentPulse</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWTransparentRGBToGrayscale</defName>
 		<shaderPath>TransparentRGBToGrayscale</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
@@ -61,19 +41,9 @@
 		<shaderPath>RGBToHSV</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
 
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWColorBlindness</defName>
-		<shaderPath>ColorBlindness</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWCutoutComplexVariable</defName>
-		<shaderPath>CutoutComplexVariable</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
 	<PixelWizardry.PWShaderTypeDef>
-		<defName>PWMultiplyMasked</defName>
-		<shaderPath>MultiplyMasked</shaderPath>
+		<defName>PWScreenChangeColors</defName>
+		<shaderPath>ScreenChangeColors</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
   
 </Defs>
