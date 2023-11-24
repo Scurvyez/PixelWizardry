@@ -6,12 +6,13 @@ namespace PixelWizardry
     [StaticConstructorOnStartup]
     public static class TexButtons
     {
-        public static readonly Texture2D BlackAndWhiteMode = ContentFinder<Texture2D>.Get("UI/Buttons/BlackAndWhiteMode");
-        public static readonly Texture2D SepiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/SepiaMode");
-        public static readonly Texture2D SuperSaturatedMode = ContentFinder<Texture2D>.Get("UI/Buttons/SuperSaturatedMode");
-        public static readonly Texture2D CyberpunkMode = ContentFinder<Texture2D>.Get("UI/Buttons/CyberpunkMode");
-        public static readonly Texture2D RedMode = ContentFinder<Texture2D>.Get("UI/Buttons/RedMode");
-        public static readonly Texture2D GreenMode = ContentFinder<Texture2D>.Get("UI/Buttons/GreenMode");
-        public static readonly Texture2D BlueMode = ContentFinder<Texture2D>.Get("UI/Buttons/BlueMode");
+        public static readonly Texture2D AchromatomalyMode = ContentFinder<Texture2D>.Get("UI/Buttons/AchromatomalyMode");
+        public static readonly Texture2D AchromatopsiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/AchromatopsiaMode");
+        public static readonly Texture2D DeuteranomalyMode = ContentFinder<Texture2D>.Get("UI/Buttons/DeuteranomalyMode");
+        public static readonly Texture2D DeuteranopiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/DeuteranopiaMode");
+        public static readonly Texture2D ProtanomalyMode = ContentFinder<Texture2D>.Get("UI/Buttons/ProtanomalyMode");
+        public static readonly Texture2D ProtanopiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/ProtanopiaMode");
+        public static readonly Texture2D TritanomalyMode = ContentFinder<Texture2D>.Get("UI/Buttons/TritanomalyMode");
+        public static readonly Texture2D TritanopiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/TritanopiaMode");
     }
 }

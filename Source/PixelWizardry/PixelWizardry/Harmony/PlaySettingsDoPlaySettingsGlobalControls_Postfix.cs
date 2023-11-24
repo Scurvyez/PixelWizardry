@@ -21,27 +21,27 @@ namespace PixelWizardry
         {
             if (!worldView)
             {
-                row.ToggleableIcon(ref Protanopia, TexButtons.BlackAndWhiteMode, "Protanopia", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Protanomaly, TexButtons.BlackAndWhiteMode, "Protanomaly", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Deuteranopia, TexButtons.BlackAndWhiteMode, "Deuteranopia", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Deuteranomaly, TexButtons.BlackAndWhiteMode, "Deuteranomaly", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Tritanopia, TexButtons.BlackAndWhiteMode, "Tritanopia", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Tritanomaly, TexButtons.BlackAndWhiteMode, "Tritanomaly", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Achromatopsia, TexButtons.BlackAndWhiteMode, "Achromatopsia", SoundDefOf.Mouseover_ButtonToggle);
-                row.ToggleableIcon(ref Achromatomaly, TexButtons.BlackAndWhiteMode, "Achromatomaly", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Protanopia, TexButtons.ProtanopiaMode, "Protanopia mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Protanomaly, TexButtons.ProtanomalyMode, "Protanomaly mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Deuteranopia, TexButtons.DeuteranopiaMode, "Deuteranopia mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Deuteranomaly, TexButtons.DeuteranomalyMode, "Deuteranomaly mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Tritanopia, TexButtons.TritanopiaMode, "Tritanopia mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Tritanomaly, TexButtons.TritanomalyMode, "Tritanomaly mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Achromatopsia, TexButtons.AchromatopsiaMode, "Achromatopsia mode", SoundDefOf.Mouseover_ButtonToggle);
+                row.ToggleableIcon(ref Achromatomaly, TexButtons.AchromatomalyMode, "Achromatomaly mode", SoundDefOf.Mouseover_ButtonToggle);
             }
         }
 
         public static void ExposeData()
         {
-            Scribe_Values.Look(ref Protanopia, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Protanomaly, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Deuteranopia, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Deuteranomaly, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Tritanopia, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Tritanomaly, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Achromatopsia, "Normal", defaultValue: false);
-            Scribe_Values.Look(ref Achromatomaly, "Normal", defaultValue: false);
+            Scribe_Values.Look(ref Protanopia, "Protanopia", defaultValue: false);
+            Scribe_Values.Look(ref Protanomaly, "Protanomaly", defaultValue: false);
+            Scribe_Values.Look(ref Deuteranopia, "Deuteranopia", defaultValue: false);
+            Scribe_Values.Look(ref Deuteranomaly, "Deuteranomaly", defaultValue: false);
+            Scribe_Values.Look(ref Tritanopia, "Tritanopia", defaultValue: false);
+            Scribe_Values.Look(ref Tritanomaly, "Tritanomaly", defaultValue: false);
+            Scribe_Values.Look(ref Achromatopsia, "Achromatopsia", defaultValue: false);
+            Scribe_Values.Look(ref Achromatomaly, "Achromatomaly", defaultValue: false);
         }
     }
 }
