@@ -11,16 +11,18 @@ namespace PixelWizardry
         private static AssetBundle bundleInt;
         private static Dictionary<string, Shader> lookupShaders;
         private static Dictionary<string, Material> lookupMaterials;
-        public static readonly Shader LinearDodge = LoadShader(Path.Combine("Assets", "LinearDodge.shader"));
-        public static readonly Shader Subtract = LoadShader(Path.Combine("Assets", "Subtract.shader"));
-        public static readonly Shader Screen = LoadShader(Path.Combine("Assets", "Screen.shader"));
-        public static readonly Shader Multiply = LoadShader(Path.Combine("Assets", "Multiply.shader"));
-        public static readonly Shader LinearBurn = LoadShader(Path.Combine("Assets", "LinearBurn.shader"));
-        public static readonly Shader TransparentRGBToBlack = LoadShader(Path.Combine("Assets", "TransparentRGBToBlack.shader"));
-        public static readonly Shader TransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "TransparentRGBToGrayscale.shader"));
-        public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
-        public static readonly Shader ScreenChangeColors = LoadShader(Path.Combine("Assets", "ScreenChangeColors.shader"));
-        
+        public static readonly Shader BlendLinearDodge = LoadShader(Path.Combine("Assets", "BlendLinearDodge.shader"));
+        public static readonly Shader BlendSubtract = LoadShader(Path.Combine("Assets", "BlendSubtract.shader"));
+        public static readonly Shader BlendScreen = LoadShader(Path.Combine("Assets", "BlendScreen.shader"));
+        public static readonly Shader BlendMultiply = LoadShader(Path.Combine("Assets", "BlendMultiply.shader"));
+        public static readonly Shader BlendLinearBurn = LoadShader(Path.Combine("Assets", "BlendLinearBurn.shader"));
+        public static readonly Shader BlendTransparentRGBToBlack = LoadShader(Path.Combine("Assets", "BlendTransparentRGBToBlack.shader"));
+        public static readonly Shader BlendTransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "BlendTransparentRGBToGrayscale.shader"));
+        public static readonly Shader BlendRGBToHSV = LoadShader(Path.Combine("Assets", "BlendRGBToHSV.shader"));
+        public static readonly Shader ScreenColorBlindness = LoadShader(Path.Combine("Assets", "ScreenColorBlindness.shader"));
+        public static readonly Shader ScreenHSV = LoadShader(Path.Combine("Assets", "ScreenHSV.shader"));
+        public static readonly Shader ScreenPositionEffects = LoadShader(Path.Combine("Assets", "ScreenPositionEffects.shader"));
+
         public static AssetBundle PWBundle
         {
             get

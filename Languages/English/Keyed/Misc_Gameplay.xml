@@ -5,8 +5,52 @@
 
     <PW_ModName>Pixel Wizardry</PW_ModName>
 
-    <!-- UI -->
+    <!-- Color blind screen settings -->
+    <PW_EnableColorBlindMode>Use color blind modes?</PW_EnableColorBlindMode>
+    <PW_EnableColorBlindModeDesc>Click to enable the use of various color blind modes.</PW_EnableColorBlindModeDesc>
+
     <PW_IntensityFactor>Color blindness intensity factor: {0}%</PW_IntensityFactor>
     <PW_IntensityFactorDesc>Adjust to increase / decrease the intensity of the color blindness mode currently active.</PW_IntensityFactorDesc>
+
+    <PW_SettingProtanopia>Protanopia</PW_SettingProtanopia>
+    <PW_SettingProtanopiaDesc>Enable or disable protanopia mode.</PW_SettingProtanopiaDesc>
+
+    <PW_SettingProtanomaly>Protanomaly</PW_SettingProtanomaly>
+    <PW_SettingProtanomalyDesc>Enable or disable protanomaly mode.</PW_SettingProtanomalyDesc>
+
+    <PW_SettingDeuteranopia>Deuteranopia</PW_SettingDeuteranopia>
+    <PW_SettingDeuteranopiaDesc>Enable or disable deuteranopia mode.</PW_SettingDeuteranopiaDesc>
+
+    <PW_SettingDeuteranomaly>Deuteranomaly</PW_SettingDeuteranomaly>
+    <PW_SettingDeuteranomalyDesc>Enable or disable deuteranomaly mode.</PW_SettingDeuteranomalyDesc>
+
+    <PW_SettingTritanopia>Tritanopia</PW_SettingTritanopia>
+    <PW_SettingTritanopiaDesc>Enable or disable tritanopia mode.</PW_SettingTritanopiaDesc>
+
+    <PW_SettingTritanomaly>Tritanomaly</PW_SettingTritanomaly>
+    <PW_SettingTritanomalyDesc>Enable or disable tritanomaly mode.</PW_SettingTritanomalyDesc>
+
+    <PW_SettingAchromatopsia>Achromatopsia</PW_SettingAchromatopsia>
+    <PW_SettingAchromatopsiaDesc>Enable or disable achromatopsia mode.</PW_SettingAchromatopsiaDesc>
+
+    <PW_SettingAchromatomaly>Achromatomaly</PW_SettingAchromatomaly>
+    <PW_SettingAchromatomalyDesc>Enable or disable achromatomaly mode.</PW_SettingAchromatomalyDesc>
+
+    <!-- HSV screen settings -->
+    <PW_EnableHSVAdjustment>Enable HSV adjustment?</PW_EnableHSVAdjustment>
+    <PW_EnableHSVAdjustmentDesc>Check to allow HSV color adjustment on the map.</PW_EnableHSVAdjustmentDesc>
+
+    <PW_HAmount>Hue: {0}</PW_HAmount>
+    <PW_HAmountDesc>Adjust to change the primary hue of the map.</PW_HAmountDesc>
+
+    <PW_SAmount>Saturation: {0}</PW_SAmount>
+    <PW_SAmountDesc>Adjust to change how saturated the color of the map is.</PW_SAmountDesc>
+
+    <PW_VAmount>Value: {0}</PW_VAmount>
+    <PW_VAmountDesc>Adjust to change the overall brightness (or intensity) of the maps' color.</PW_VAmountDesc>
+
+    <!-- Screen Position Effects Settings -->
+    <PW_EnableScreenPositionEffects>Use position tracking screen effects?</PW_EnableScreenPositionEffects>
+    <PW_EnableScreenPositionEffectsDesc>Check to allow visual effects on the map with post processing.</PW_EnableScreenPositionEffectsDesc>
 
 </LanguageData>

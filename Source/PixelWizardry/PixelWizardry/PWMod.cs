@@ -81,16 +81,56 @@ namespace PixelWizardry
             Rect viewRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
             list.Begin(viewRect);
 
-            // GENERAL SETTINGS
-            list.Label("<color=white>General</color>");
-            list.Gap(3.00f);
+            // Color Blindness Settings
+            list.Label("<color=white>Color Blindness Settings</color>");
+            list.Gap(3.0f);
+
+            list.CheckboxLabeled("PW_EnableColorBlindMode".Translate(), ref settings._EnableColorBlindModes, "PW_EnableColorBlindModeDesc".Translate());
+
+            DrawSettingWithTexture(list, "PW_SettingProtanopia".Translate(), ref settings._ProtanopiaMode, TexButtons.ProtanopiaMode);
+            DrawSettingWithTexture(list, "PW_SettingProtanomaly".Translate(), ref settings._ProtanomalyMode, TexButtons.ProtanomalyMode);
+            DrawSettingWithTexture(list, "PW_SettingDeuteranopia".Translate(), ref settings._DeuteranopiaMode, TexButtons.DeuteranopiaMode);
+            DrawSettingWithTexture(list, "PW_SettingDeuteranomaly".Translate(), ref settings._DeuteranomalyMode, TexButtons.DeuteranomalyMode);
+            DrawSettingWithTexture(list, "PW_SettingTritanopia".Translate(), ref settings._TritanopiaMode, TexButtons.TritanopiaMode);
+            DrawSettingWithTexture(list, "PW_SettingTritanomaly".Translate(), ref settings._TritanomalyMode, TexButtons.TritanomalyMode);
+            DrawSettingWithTexture(list, "PW_SettingAchromatopsia".Translate(), ref settings._AchromatopsiaMode, TexButtons.AchromatopsiaMode);
+            DrawSettingWithTexture(list, "PW_SettingAchromatomaly".Translate(), ref settings._AchromatomalyMode, TexButtons.AchromatomalyMode);
+
+            list.Gap(15.0f);
+
+            // HSV Settings
+            list.Label("HSV Settings");
+            list.Gap(3.0f);
 
             int decimalPlaces = 2;
 
-            list.Label(label: "PW_IntensityFactor".Translate((10f * settings._IntensityFactor).ToString($"F{decimalPlaces}")), tooltip: "PW_IntensityFactorDesc".Translate());
-            settings._IntensityFactor = list.Slider(10f * settings._IntensityFactor, 0f, 10f) / 10f;
+            list.CheckboxLabeled("PW_EnableHSVAdjustment".Translate(), ref settings._EnableHSVAdjustment, "PW_EnableHSVAdjustmentDesc".Translate());
+
+            list.Label(label: "PW_HAmount".Translate((settings._HAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_HAmountDesc".Translate());
+            settings._HAmount = list.Slider(settings._HAmount, 0f, 2f);
+
+            list.Label(label: "PW_SAmount".Translate((settings._SAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_SAmountDesc".Translate());
+            settings._SAmount = list.Slider(settings._SAmount, 0f, 2f);
+
+            list.Label(label: "PW_VAmount".Translate((settings._VAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_VAmountDesc".Translate());
+            settings._VAmount = list.Slider(settings._VAmount, 0f, 2f);
+
+            list.Gap(15.0f);
+
+            // Screen Position Effects Settings
+            list.Label("Screen Position Effects Settings");
+            list.Gap(3.0f);
+
+            list.CheckboxLabeled("PW_EnableScreenPositionEffects".Translate(), ref settings._EnableScreenPositionEffects, "PW_EnableScreenPositionEffectsDesc".Translate());
 
             list.End();
+        }
+
+        private static void DrawSettingWithTexture(Listing_Standard list, string label, ref bool value, Texture2D texture)
+        {
+            Rect rect = list.GetRect(24f);
+            Widgets.Label(rect.LeftPartPixels(30f), new GUIContent(texture)); // draw our texture
+            Widgets.CheckboxLabeled(rect.RightPartPixels(rect.width - 30f), label, ref value); // draw our checkbox with label
         }
 
         public override string SettingsCategory()
@@ -103,25 +143,160 @@ namespace PixelWizardry
     {
         private static PWModSettings _instance;
 
-        public float _IntensityFactor = 1.0f;
+        public bool _EnableColorBlindModes = false;
+        public bool _ProtanopiaMode = false;
+        public bool _ProtanomalyMode = false;
+        public bool _DeuteranopiaMode = false;
+        public bool _DeuteranomalyMode = false;
+        public bool _TritanopiaMode = false;
+        public bool _TritanomalyMode = false;
+        public bool _AchromatopsiaMode = false;
+        public bool _AchromatomalyMode = false;
 
+        public bool _EnableHSVAdjustment = false;
+        public float _HAmount = 1f;
+        public float _SAmount = 1f;
+        public float _VAmount = 1f;
+
+        public bool _EnableScreenPositionEffects = false;
+        
         public PWModSettings()
         {
             _instance = this;
         }
 
-        public static float IntensityFactor
+        public static bool EnableColorBlindModes
         {
             get
             {
-                return _instance._IntensityFactor;
+                return _instance._EnableColorBlindModes;
+            }
+        }
+
+        public static bool ProtanopiaMode
+        {
+            get
+            {
+                return _instance._ProtanopiaMode;
+            }
+        }
+
+        public static bool ProtanomalyMode
+        {
+            get
+            {
+                return _instance._ProtanomalyMode;
+            }
+        }
+
+        public static bool DeuteranopiaMode
+        {
+            get
+            {
+                return _instance._DeuteranopiaMode;
+            }
+        }
+
+        public static bool DeuteranomalyMode
+        {
+            get
+            {
+                return _instance._DeuteranomalyMode;
+            }
+        }
+
+        public static bool TritanopiaMode
+        {
+            get
+            {
+                return _instance._TritanopiaMode;
+            }
+        }
+
+        public static bool TritanomalyMode
+        {
+            get
+            {
+                return _instance._TritanomalyMode;
+            }
+        }
+
+        public static bool AchromatopsiaMode
+        {
+            get
+            {
+                return _instance._AchromatopsiaMode;
+            }
+        }
+
+        public static bool AchromatomalyMode
+        {
+            get
+            {
+                return _instance._AchromatomalyMode;
+            }
+        }
+
+        public static bool EnableHSVAdjustment
+        {
+            get
+            {
+                return _instance._EnableHSVAdjustment;
+            }
+        }
+
+        public static float HAmount
+        {
+            get
+            {
+                return _instance._HAmount;
+            }
+        }
+
+        public static float SAmount
+        {
+            get
+            {
+                return _instance._SAmount;
+            }
+        }
+
+        public static float VAmount
+        {
+            get
+            {
+                return _instance._VAmount;
+            }
+        }
+
+        public static bool EnableScreenPositionEffects
+        {
+            get
+            {
+                return _instance._EnableScreenPositionEffects;
             }
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref _IntensityFactor, "_IntensityFactor", 1.0f);
+            Scribe_Values.Look(ref _EnableColorBlindModes, "_EnableColorBlindModes", false);
+
+            Scribe_Values.Look(ref _ProtanopiaMode, "_ProtanopiaMode", false);
+            Scribe_Values.Look(ref _ProtanomalyMode, "_ProtanomalyMode", false);
+            Scribe_Values.Look(ref _DeuteranopiaMode, "_DeuteranopiaMode", false);
+            Scribe_Values.Look(ref _DeuteranomalyMode, "_DeuteranomalyMode", false);
+            Scribe_Values.Look(ref _TritanopiaMode, "_TritanopiaMode", false);
+            Scribe_Values.Look(ref _TritanomalyMode, "_TritanomalyMode", false);
+            Scribe_Values.Look(ref _AchromatopsiaMode, "_AchromatopsiaMode", false);
+            Scribe_Values.Look(ref _AchromatomalyMode, "_AchromatomalyMode", false);
+
+            Scribe_Values.Look(ref _EnableHSVAdjustment, "_EnableHSVAdjustment", false);
+            Scribe_Values.Look(ref _HAmount, "_HAmount", 1f);
+            Scribe_Values.Look(ref _SAmount, "_SAmount", 1f);
+            Scribe_Values.Look(ref _VAmount, "_VAmount", 1f);
+
+            Scribe_Values.Look(ref _EnableScreenPositionEffects, "_EnableScreenPositionEffects", false);
         }
     }
 }

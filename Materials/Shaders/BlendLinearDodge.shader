@@ -1,4 +1,4 @@
-﻿Shader "Unlit/LinearDodge"
+﻿Shader "Unlit/BlendLinearDodge"
 {
     Properties 
 	{
@@ -11,7 +11,7 @@
 		Tags 
 		{ 
 			"IGNOREPROJECTOR" = "true" 
-			"QUEUE" = "Transparent-100" 
+			"QUEUE" = "Transparent+150" 
 			"RenderType" = "Transparent" 
 		}
 		
@@ -20,7 +20,7 @@
 			Tags 
 			{ 
 				"IGNOREPROJECTOR" = "true" 
-				"QUEUE" = "Transparent-100" 
+				"QUEUE" = "Transparent+150" 
 				"RenderType" = "Transparent" 
 			}
 			

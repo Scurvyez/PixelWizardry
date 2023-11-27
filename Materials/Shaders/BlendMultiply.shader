@@ -1,11 +1,9 @@
-﻿Shader "Unlit/TransparentRGBToBlackPulse"
+﻿Shader "Unlit/BlendMultiply"
 {
     Properties 
 	{
 		_MainTex ("Main texture", 2D) = "white" {}
 		_Color ("Color", Vector) = (1,1,1,1)
-		_PulseSpeed ("Pulse Speed", Range(0.1, 10.0)) = 1.0
-		_PulseAmplitude ("Pulse Amplitude", Range(0.1, 2.0)) = 1.0
 	}
 
 	SubShader {
@@ -26,7 +24,7 @@
 				"RenderType" = "Transparent" 
 			}
 			
-			Blend SrcAlpha OneMinusSrcAlpha
+			Blend DstColor OneMinusSrcAlpha
 			ZWrite Off
 			CGPROGRAM
 
@@ -37,10 +35,6 @@
 			float4 _MainTex_ST;
 			float4 _Color;
 			sampler2D _MainTex;
-
-			float _GameSeconds;
-			float _PulseSpeed;  // Adjust the speed of the pulse effect
-            float _PulseAmplitude;  // Adjust the amplitude of the pulse effect
 
 			struct v2f
 			{
@@ -53,7 +47,7 @@
 			{
 				float4 sv_target : SV_Target0;
 			};
- 
+
 			v2f vert(appdata_full v)
 			{
                 v2f o;
@@ -78,19 +72,11 @@
 			fout frag(v2f inp)
 			{
                 fout o;
-				float4 finalColor = tex2D(_MainTex, inp.texcoord.xy);
-				finalColor = finalColor * _Color;
-
-				// Calculate the pulse factor based on time
-                float pulseFactor = abs(sin(_GameSeconds * _PulseSpeed));
-
-				// Increase the brightness of the pixels using the pulse factor
-                //finalColor.rgb += finalColor.rgb * pulseFactor * _PulseAmplitude;
-				finalColor = float4(0, 0, 0, finalColor.a) * pulseFactor * _PulseAmplitude;  // Set RGB channels to black and preserve alpha
-
-				//finalColor.rgb *= finalColor.a;
-				o.sv_target = finalColor * inp.color;
-				return o;
+                float4 finalColor = tex2D(_MainTex, inp.texcoord.xy);
+                finalColor = finalColor * _Color;
+				finalColor.rgb *= finalColor.a;
+                o.sv_target = finalColor * inp.color;
+                return o;
 			}
 			ENDCG
 		}

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Multiply"
+﻿Shader "Unlit/BlendSubtract"
 {
     Properties 
 	{
@@ -24,7 +24,8 @@
 				"RenderType" = "Transparent" 
 			}
 			
-			Blend DstColor OneMinusSrcAlpha
+			BlendOp RevSub
+			Blend SrcAlpha One
 			ZWrite Off
 			CGPROGRAM
 

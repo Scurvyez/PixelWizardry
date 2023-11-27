@@ -7,61 +7,72 @@ namespace PixelWizardry
     {
         FullScreenEffects fullScreenEffects = FullScreenEffects.instance;
 
+        private Pawn trackedPawn;
+        private Vector3 trackedPosition;
+
         public MapComp_UpdateColorBlindnessShader(Map map) : base(map) { }
+
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            trackedPawn = map.mapPawns.AllPawnsSpawned.RandomElement();
+        }
 
         public override void MapComponentTick()
         {
             base.MapComponentTick();
 
-            bool Protanopia = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Protanopia;
-            bool Protanomaly = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Protanomaly;
-            bool Deuteranopia = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Deuteranopia;
-            bool Deuteranomaly = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Deuteranomaly;
-            bool Tritanopia = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Tritanopia;
-            bool Tritanomaly = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Tritanomaly;
-            bool Achromatopsia = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Achromatopsia;
-            bool Achromatomaly = PlaySettingsDoPlaySettingsGlobalControls_Postfix.Achromatomaly;
-
-            if (PWModSettings.IntensityFactor > 0)
+            if (PWModSettings.EnableColorBlindModes)
             {
-                fullScreenEffects.material.SetFloat("_IntensityFactor", PWModSettings.IntensityFactor);
+                if (PWModSettings.ProtanopiaMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Protanopia);
+                }
+                else if (PWModSettings.ProtanomalyMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Protanomaly);
+                }
+                else if (PWModSettings.DeuteranopiaMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Deuteranopia);
+                }
+                else if (PWModSettings.DeuteranomalyMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Deuteranomaly);
+                }
+                else if (PWModSettings.TritanopiaMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Tritanopia);
+                }
+                else if (PWModSettings.TritanomalyMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Tritanomaly);
+                }
+                else if (PWModSettings.AchromatopsiaMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Achromatopsia);
+                }
+                else if (PWModSettings.AchromatomalyMode)
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Achromatomaly);
+                }
+                else
+                {
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Normal);
+                }
             }
 
-            if (Protanopia)
+            if (PWModSettings.EnableHSVAdjustment)
             {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Protanopia);
+                fullScreenEffects.hsvMat.SetFloat("_H", PWModSettings.HAmount);
+                fullScreenEffects.hsvMat.SetFloat("_S", PWModSettings.SAmount);
+                fullScreenEffects.hsvMat.SetFloat("_V", PWModSettings.VAmount);
             }
-            else if (Protanomaly)
+
+            if (PWModSettings.EnableScreenPositionEffects)
             {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Protanomaly);
-            }
-            else if (Deuteranopia)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Deuteranopia);
-            }
-            else if (Deuteranomaly)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Deuteranomaly);
-            }
-            else if (Tritanopia)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Tritanopia);
-            }
-            else if (Tritanomaly)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Tritanomaly);
-            }
-            else if (Achromatopsia)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Achromatopsia);
-            }
-            else if (Achromatomaly)
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Achromatomaly);
-            }
-            else
-            {
-                ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.material, ColorBlindnessUtility.ColorBlindMode.Normal);
+                trackedPosition = trackedPawn.DrawPos;
+                fullScreenEffects.screenPositionEffectsMat.SetVector("_TrackedPosition", trackedPosition);
             }
         }
     }

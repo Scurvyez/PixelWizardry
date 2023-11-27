@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4128745896
+CRC: 3088037621
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b5f32c2c9ad0c62d822d3df4f926c04f
+    Hash: 4fa655df020393796d097dfc45f017f5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -13,13 +13,15 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/LinearDodge.shader
-- Assets/LinearBurn.shader
-- Assets/ScreenChangeColors.shader
-- Assets/Multiply.shader
-- Assets/RGBToHSV.shader
-- Assets/TransparentRGBToGrayscale.shader
-- Assets/Screen.shader
-- Assets/TransparentRGBToBlack.shader
-- Assets/Subtract.shader
+- Assets/BlendLinearDodge.shader
+- Assets/BlendLinearBurn.shader
+- Assets/ScreenColorBlindness.shader
+- Assets/BlendMultiply.shader
+- Assets/ScreenHSV.shader
+- Assets/BlendRGBToHSV.shader
+- Assets/BlendTransparentRGBToGrayscale.shader
+- Assets/BlendScreen.shader
+- Assets/BlendTransparentRGBToBlack.shader
+- Assets/BlendSubtract.shader
+- Assets/ScreenPositionEffects.shader
 Dependencies: []

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/ScreenShader"
+﻿Shader "Unlit/BlendLinearBurn"
 {
     Properties 
 	{
@@ -24,7 +24,8 @@
 				"RenderType" = "Transparent" 
 			}
 			
-			Blend One OneMinusSrcColor
+			BlendOp RevSub
+			Blend One One
 			ZWrite Off
 			CGPROGRAM
 
@@ -74,6 +75,11 @@
                 fout o;
                 float4 finalColor = tex2D(_MainTex, inp.texcoord.xy);
                 finalColor = finalColor * _Color;
+
+				finalColor.r = (1.0f - (finalColor.r));
+                finalColor.g = (1.0f - (finalColor.g));
+                finalColor.b = (1.0f - (finalColor.b));
+
 				finalColor.rgb *= finalColor.a;
                 o.sv_target = finalColor * inp.color;
                 return o;

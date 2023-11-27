@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Subtract"
+Shader "Unlit/BlendTransparentRGBToGrayscale"
 {
     Properties 
 	{
@@ -24,8 +24,7 @@
 				"RenderType" = "Transparent" 
 			}
 			
-			BlendOp RevSub
-			Blend SrcAlpha One
+			Blend One OneMinusSrcColor
 			ZWrite Off
 			CGPROGRAM
 
@@ -75,6 +74,11 @@
                 fout o;
                 float4 finalColor = tex2D(_MainTex, inp.texcoord.xy);
                 finalColor = finalColor * _Color;
+
+				// Convert the final color to grayscale
+				float grayscale = finalColor.r * 0.299 + finalColor.g * 0.587 + finalColor.b * 0.114;
+				finalColor.rgb = float3(grayscale, grayscale, grayscale);
+
 				finalColor.rgb *= finalColor.a;
                 o.sv_target = finalColor * inp.color;
                 return o;

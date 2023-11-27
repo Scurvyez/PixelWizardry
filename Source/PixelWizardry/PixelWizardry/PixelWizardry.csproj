@@ -65,10 +65,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MapComps\MapComp_UpdatePositionTrackingShader.cs" />
     <Compile Include="MapComps\MapComp_UpdateColorBlindnessShader.cs" />
     <Compile Include="Harmony\CurrentNotify_LoadedSceneChanged_Postfix.cs" />
     <Compile Include="Harmony\SkyManagerCurrentSkyTarget_Postfix.cs" />
-    <Compile Include="Harmony\PlaySettingsDoPlaySettingsGlobalControls_Postfix.cs" />
     <Compile Include="Utils\ColorBlindnessUtility.cs" />
     <Compile Include="Utils\FullScreenEffects.cs" />
     <Compile Include="Utils\TexButtons.cs" />
