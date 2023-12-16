@@ -18,7 +18,7 @@ namespace PixelWizardry
         public static readonly Shader BlendLinearBurn = LoadShader(Path.Combine("Assets", "BlendLinearBurn.shader"));
         public static readonly Shader BlendTransparentRGBToBlack = LoadShader(Path.Combine("Assets", "BlendTransparentRGBToBlack.shader"));
         public static readonly Shader BlendTransparentRGBToGrayscale = LoadShader(Path.Combine("Assets", "BlendTransparentRGBToGrayscale.shader"));
-        public static readonly Shader BlendRGBToHSV = LoadShader(Path.Combine("Assets", "BlendRGBToHSV.shader"));
+        public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
         public static readonly Shader ScreenColorBlindness = LoadShader(Path.Combine("Assets", "ScreenColorBlindness.shader"));
         public static readonly Shader ScreenHSV = LoadShader(Path.Combine("Assets", "ScreenHSV.shader"));
         public static readonly Shader ScreenPositionEffects = LoadShader(Path.Combine("Assets", "ScreenPositionEffects.shader"));

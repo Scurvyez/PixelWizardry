@@ -29,10 +29,12 @@ namespace PixelWizardry
             {
                 Graphics.Blit(source, destination, hsvMat);
             }
+            /*
             else if (PWModSettings.EnableScreenPositionEffects)
             {
                 Graphics.Blit(source, destination, screenPositionEffectsMat);
             }
+            */
             else 
             {
                 Graphics.Blit(source, destination);

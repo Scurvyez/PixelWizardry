@@ -4,102 +4,19 @@
     <!--========== Vanilla Testing ==========-->
 
     <!-- <Operation Class="PatchOperationAdd">
-        <xpath>Defs/PawnKindDef[defName="Bear_Grizzly"]/lifeStages/li/bodyGraphicData</xpath>
+        <xpath>Defs/PawnKindDef[defName="Emu"]/lifeStages/li/bodyGraphicData</xpath>
         <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
+			<shaderType>PWRGBToHSV</shaderType>
+            <shaderParameters>
+                <_H>0.5</_H>
+                <_S>1.5</_S>
+                <_V>2.25</_V>
+            </shaderParameters>
 		</value>
     </Operation>
 
     <Operation Class="PatchOperationRemove">
-        <xpath>Defs/PawnKindDef[defName="Bear_Grizzly"]/lifeStages/li/bodyGraphicData/shadowData</xpath>
-    </Operation> -->
-
-    <!--========== RefulgentArrow Testing ==========-->
-
-    <!-- <Operation Class="PatchOperationAdd">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CCW"]</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_TrailOrbiter_RefulgentArrow_CW"]</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Particle_RefulgentArrow_Ring"]</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_RefulgentArrow"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Base"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_RefulgentArrow_Pulse"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentRGBToGrayscale</shaderType>
-		</value>
-    </Operation> -->
-
-    <!--========== RefulgentArrow Testing ==========-->
-
-    <!-- <Operation Class="PatchOperationAdd">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_SpellFlash_BurstShot"]</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_BurstShot"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Trail_BurstShot_Sparks"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Blue"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Purple"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/EccentricProjectiles.EffectDef[defName="ARR_Impact_BurstShot_Pulse"]/shaderType</xpath>
-        <value>
-			<shaderType>PWTransparentPulse</shaderType>
-		</value>
+        <xpath>Defs/PawnKindDef[defName="Emu"]/lifeStages/li/bodyGraphicData/shadowData</xpath>
     </Operation> -->
 
 </Patch>

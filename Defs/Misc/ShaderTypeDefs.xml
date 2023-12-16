@@ -37,8 +37,8 @@
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWBlendRGBToHSV</defName>
-		<shaderPath>BlendRGBToHSV</shaderPath>
+		<defName>PWRGBToHSV</defName>
+		<shaderPath>RGBToHSV</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef>

@@ -16,9 +16,14 @@
 Discord: Steve o.O#1151
 steam: Scurvyez
 
-This is a mod purely for mod-makers. It adds serveral new shaders for use with RimWorld textures. Some of the shaders produce blending effects similar to those found in programs like Photoshop.
-The currently available shaders include Linear Dodge (Add), Linear Burn, Screen, Multiply, and Subtract, RGBToBlack, RGBToGrayscale, HSVToRGB, and pusling versions of most of them.
+This is a mod adds serveral new shaders for use with RimWorld textures. Some of the shaders produce blending effects similar to those found in programs like Photoshop.
+The currently available shaders include Linear Dodge (Add), Linear Burn, Screen, Multiply, and Subtract, RGBToBlack, RGBToGrayscale, and HSVToRGB. 
+In the latest version, I have also included a full-screen, post-processing shader which enables color-blind modes. All 8 forms of color-blindness are supported.
+You must enable the correct options for this in the mods' settings to work.
 
+More to come!
+
+A huge thanks to everyone over at the official Rimworld Discord server for all the help and motivation to finish this beast of a mod.
 Shoutout to Hershey. You've been the absolute best pal a developer could ask for.
     </description>
 

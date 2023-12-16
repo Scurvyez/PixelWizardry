@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3129181742
+CRC: 2063390766
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 58500f13703045b4dbb37aecd43a9576
+    Hash: 34d76e1cda3baa8925d842facadfc144
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -18,7 +18,7 @@ Assets:
 - Assets/ScreenColorBlindness.shader
 - Assets/BlendMultiply.shader
 - Assets/ScreenHSV.shader
-- Assets/BlendRGBToHSV.shader
+- Assets/RGBToHSV.shader
 - Assets/BlendTransparentRGBToGrayscale.shader
 - Assets/BlendScreen.shader
 - Assets/BlendTransparentRGBToBlack.shader
