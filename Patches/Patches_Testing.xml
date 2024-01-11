@@ -3,20 +3,18 @@
 
     <!--========== Vanilla Testing ==========-->
 
-    <!-- <Operation Class="PatchOperationAdd">
-        <xpath>Defs/PawnKindDef[defName="Emu"]/lifeStages/li/bodyGraphicData</xpath>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
         <value>
-			<shaderType>PWRGBToHSV</shaderType>
-            <shaderParameters>
-                <_H>0.5</_H>
-                <_S>1.5</_S>
-                <_V>2.25</_V>
-            </shaderParameters>
+			<thingClass>PixelWizardry.TESTBUILDING</thingClass>
 		</value>
     </Operation>
 
-    <Operation Class="PatchOperationRemove">
-        <xpath>Defs/PawnKindDef[defName="Emu"]/lifeStages/li/bodyGraphicData/shadowData</xpath>
-    </Operation> -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="TorchLamp"]/graphicData</xpath>
+        <value>
+			<shaderType>PWTEST</shaderType>
+		</value>
+    </Operation>
 
 </Patch>

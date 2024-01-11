@@ -22,6 +22,7 @@ namespace PixelWizardry
         public static readonly Shader ScreenColorBlindness = LoadShader(Path.Combine("Assets", "ScreenColorBlindness.shader"));
         public static readonly Shader ScreenHSV = LoadShader(Path.Combine("Assets", "ScreenHSV.shader"));
         public static readonly Shader ScreenPositionEffects = LoadShader(Path.Combine("Assets", "ScreenPositionEffects.shader"));
+        public static readonly Shader TEST = LoadShader(Path.Combine("Assets", "TEST.shader"));
 
         public static AssetBundle PWBundle
         {

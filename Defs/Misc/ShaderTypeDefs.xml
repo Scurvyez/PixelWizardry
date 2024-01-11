@@ -50,5 +50,10 @@
 		<defName>PWScreenTrackedPositionEffects</defName>
 		<shaderPath>ScreenTrackedPositionEffects</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWTEST</defName>
+		<shaderPath>TEST</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
   
 </Defs>

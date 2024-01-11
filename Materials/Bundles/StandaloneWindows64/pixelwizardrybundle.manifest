@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 639803114
+CRC: 1050627017
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7dc3031f73fa42e1ed72a9481b1ee2c4
+    Hash: 30f833ec47a897ca59d5af442cd8ae6a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -14,6 +14,7 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/BlendLinearDodge.shader
+- Assets/TEST.shader
 - Assets/BlendLinearBurn.shader
 - Assets/ScreenColorBlindness.shader
 - Assets/BlendMultiply.shader
