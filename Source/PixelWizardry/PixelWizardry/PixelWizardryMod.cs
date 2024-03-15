@@ -6,12 +6,12 @@ using System.IO;
 
 namespace PixelWizardry
 {
-    public class PWMod : Mod
+    public class PixelWizardryMod : Mod
     {
-        public static PWMod mod;
+        public static PixelWizardryMod mod;
         PWModSettings settings;
 
-        public PWMod(ModContentPack content) : base(content)
+        public PixelWizardryMod(ModContentPack content) : base(content)
         {
             mod = this;
             settings = GetSettings<PWModSettings>();
@@ -19,7 +19,7 @@ namespace PixelWizardry
             var harmony = new Harmony("com.pixelwizardry");
 
             harmony.Patch(original: AccessTools.PropertyGetter(typeof(ShaderTypeDef), nameof(ShaderTypeDef.Shader)),
-                prefix: new HarmonyMethod(typeof(PWMod),
+                prefix: new HarmonyMethod(typeof(PixelWizardryMod),
                 nameof(ShaderFromAssetBundle)));
 
             harmony.PatchAll();

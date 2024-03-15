@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendLinearDodge</defName>
+		<shaderPath>BlendLinearDodge</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendSubtract</defName>
+		<shaderPath>BlendSubtract</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendScreen</defName>
+		<shaderPath>BlendScreen</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendMultiply</defName>
+		<shaderPath>BlendMultiply</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendLinearBurn</defName>
+		<shaderPath>BlendLinearBurn</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendTransparentRGBToBlack</defName>
+		<shaderPath>BlendTransparentRGBToBlack</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWBlendTransparentRGBToGrayscale</defName>
+		<shaderPath>BlendTransparentRGBToGrayscale</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef> 
+		<defName>PWRGBToHSV</defName>
+		<shaderPath>RGBToHSV</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWScreenColorBlindness</defName>
+		<shaderPath>ScreenColorBlindness</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWScreenTrackedPositionEffects</defName>
+		<shaderPath>ScreenTrackedPositionEffects</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWTEST</defName>
+		<shaderPath>TEST</shaderPath>
+	</PixelWizardry.PWShaderTypeDef>
+	
+</Defs>

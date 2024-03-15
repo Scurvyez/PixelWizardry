@@ -65,15 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapComps\MapComp_UpdatePositionTrackingShader.cs" />
+    <Compile Include="PixelWizardryMain.cs" />
     <Compile Include="MapComps\MapComp_UpdateColorBlindnessShader.cs" />
     <Compile Include="Harmony\CurrentNotify_LoadedSceneChanged_Postfix.cs" />
-    <Compile Include="Harmony\SkyManagerCurrentSkyTarget_Postfix.cs" />
-    <Compile Include="Utils\TESTBUILDING.cs" />
     <Compile Include="Utils\ColorBlindnessUtility.cs" />
     <Compile Include="Utils\FullScreenEffects.cs" />
     <Compile Include="Utils\TexButtons.cs" />
-    <Compile Include="PWMod.cs" />
+    <Compile Include="PixelWizardryMod.cs" />
     <Compile Include="Utils\PWContentDatabase.cs" />
     <Compile Include="Utils\PWShaderPropertyIDs.cs" />
     <Compile Include="Utils\PWShaderTypeDef.cs" />

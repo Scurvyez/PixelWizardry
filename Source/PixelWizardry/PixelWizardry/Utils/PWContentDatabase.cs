@@ -30,7 +30,7 @@ namespace PixelWizardry
             {
                 if (bundleInt == null)
                 {
-                    bundleInt = PWMod.mod.MainBundle;
+                    bundleInt = PixelWizardryMod.mod.MainBundle;
                     //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>bundleInt:</color> " + bundleInt.name);
                 }
                 return bundleInt;

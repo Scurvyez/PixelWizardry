@@ -6,15 +6,13 @@
     <packageId>Scurvyez.PixelWizardry</packageId>
     <url>https://github.com/Scurvyez/PixelWizardry/wiki</url>
     <supportedVersions>
-        <li>1.1</li>
-        <li>1.2</li>
-        <li>1.3</li>
         <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
+    <modIconPath>PixelWizardry/modIcon</modIconPath>
 
     <description>
-Discord: Steve o.O#1151
-steam: Scurvyez
+Discord: steveo.o
 
 This is a mod adds several new shaders for use with Rimworld textures. Some of the shaders produce blending effects similar to those found in programs like Photoshop.
 The currently available shaders include Linear Dodge (Add), Linear Burn, Screen, Multiply, and Subtract, RGBToBlack, RGBToGrayscale, and HSVToRGB. 
@@ -35,10 +33,5 @@ Shoutout to Hershey. You've been the absolute best pal a developer could ask for
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
     </modDependencies>
-
-    <loadAfter>
-        <li>Ludeon.RimWorld</li>
-        <li>brrainz.harmony</li>
-    </loadAfter>
 
 </ModMetaData>
