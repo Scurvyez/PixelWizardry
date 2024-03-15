@@ -14,5 +14,7 @@ namespace PixelWizardry
         public static readonly Texture2D ProtanopiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/ProtanopiaMode");
         public static readonly Texture2D TritanomalyMode = ContentFinder<Texture2D>.Get("UI/Buttons/TritanomalyMode");
         public static readonly Texture2D TritanopiaMode = ContentFinder<Texture2D>.Get("UI/Buttons/TritanopiaMode");
+
+        public static readonly Texture2D _SecondaryTex = ContentFinder<Texture2D>.Get("_SecondaryTex");
     }
 }

@@ -3,18 +3,18 @@
 
     <!--========== Vanilla Testing ==========-->
 
-    <Operation Class="PatchOperationAdd">
+    <!-- <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
         <value>
-			<thingClass>PixelWizardry.TESTBUILDING</thingClass>
-		</value>
+          <thingClass>PixelWizardry.TESTBUILDING</thingClass>
+        </value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="TorchLamp"]/graphicData</xpath>
         <value>
-			<shaderType>PWTEST</shaderType>
-		</value>
-    </Operation>
+          <shaderType>PWTEST</shaderType>
+        </value>
+    </Operation> -->
 
 </Patch>

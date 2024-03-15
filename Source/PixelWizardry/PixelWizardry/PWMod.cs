@@ -118,12 +118,10 @@ namespace PixelWizardry
             list.Gap(15.0f);
 
             // Screen Position Effects Settings
-            /*
             list.Label("Screen Position Effects Settings");
             list.Gap(3.0f);
 
             list.CheckboxLabeled("PW_EnableScreenPositionEffects".Translate(), ref settings._EnableScreenPositionEffects, "PW_EnableScreenPositionEffectsDesc".Translate());
-            */
 
             list.End();
         }
@@ -160,7 +158,7 @@ namespace PixelWizardry
         public float _SAmount = 1f;
         public float _VAmount = 1f;
 
-        //public bool _EnableScreenPositionEffects = false;
+        public bool _EnableScreenPositionEffects = false;
         
         public PWModSettings()
         {
@@ -271,7 +269,6 @@ namespace PixelWizardry
             }
         }
 
-        /*
         public static bool EnableScreenPositionEffects
         {
             get
@@ -279,7 +276,6 @@ namespace PixelWizardry
                 return _instance._EnableScreenPositionEffects;
             }
         }
-        */
 
         public override void ExposeData()
         {
@@ -300,7 +296,7 @@ namespace PixelWizardry
             Scribe_Values.Look(ref _SAmount, "_SAmount", 1f);
             Scribe_Values.Look(ref _VAmount, "_VAmount", 1f);
 
-            //Scribe_Values.Look(ref _EnableScreenPositionEffects, "_EnableScreenPositionEffects", false);
+            Scribe_Values.Look(ref _EnableScreenPositionEffects, "_EnableScreenPositionEffects", false);
         }
     }
 }

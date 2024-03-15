@@ -55,5 +55,18 @@
 		<defName>PWTEST</defName>
 		<shaderPath>TEST</shaderPath>
 	</PixelWizardry.PWShaderTypeDef>
+
+	<ThingDef ParentName="BuildingBase">
+        <defName>PW_TESTBUILDING</defName>
+        <label>test building</label>
+		<thingClass>PixelWizardry.TESTBUILDING</thingClass>
+        <description>this had to be a full def... so yeah, here it is</description>
+        <graphicData>
+            <texPath>TESTBUILDING</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>PWTEST</shaderType>
+			<drawSize>1.0</drawSize>
+        </graphicData>
+    </ThingDef>
   
 </Defs>
