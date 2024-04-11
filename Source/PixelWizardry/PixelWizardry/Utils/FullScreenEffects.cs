@@ -5,25 +5,25 @@ namespace PixelWizardry
 {
     public class FullScreenEffects : MonoBehaviour
     {
-        public Material colorBlindModeMat;
+        public Material cBMMat;
         public Material hsvMat;
-        public Material screenPositionEffectsMat;
+        public Material sPEMat;
 
         public static FullScreenEffects instance;
 
         public void Start()
         {
             instance = this;
-            colorBlindModeMat = new Material(PWContentDatabase.ScreenColorBlindness);
+            cBMMat = new Material(PWContentDatabase.ScreenColorBlindness);
             hsvMat = new Material(PWContentDatabase.ScreenHSV);
-            screenPositionEffectsMat = new Material (PWContentDatabase.ScreenPositionEffects);
+            sPEMat = new Material (PWContentDatabase.ScreenPositionEffects);
         }
 
         public void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
             if (PWModSettings.EnableColorBlindModes)
             {
-                Graphics.Blit(source, destination, colorBlindModeMat);
+                Graphics.Blit(source, destination, cBMMat);
             }
             else if (PWModSettings.EnableHSVAdjustment)
             {
@@ -31,7 +31,7 @@ namespace PixelWizardry
             }
             else if (PWModSettings.EnableScreenPositionEffects)
             {
-                Graphics.Blit(source, destination, screenPositionEffectsMat);
+                Graphics.Blit(source, destination, sPEMat);
             }
             else 
             {

@@ -12,12 +12,13 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\1.5\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -68,6 +69,13 @@
     <Compile Include="PixelWizardryMain.cs" />
     <Compile Include="MapComps\MapComp_UpdateColorBlindnessShader.cs" />
     <Compile Include="Harmony\CurrentNotify_LoadedSceneChanged_Postfix.cs" />
+    <Compile Include="Testing\CompAnimalColorBasedStats.cs" />
+    <Compile Include="Testing\PawnRenderNode_AnimalRandomizedGraphics.cs" />
+    <Compile Include="Testing\CompAnimalColorRandomizer.cs" />
+    <Compile Include="Testing\GameCondition_TestCondition.cs" />
+    <Compile Include="Testing\CompShaderTest.cs" />
+    <Compile Include="Utils\PWDefOf.cs" />
+    <Compile Include="Utils\PWDebugActionsMisc.cs" />
     <Compile Include="Utils\ColorBlindnessUtility.cs" />
     <Compile Include="Utils\FullScreenEffects.cs" />
     <Compile Include="Utils\TexButtons.cs" />

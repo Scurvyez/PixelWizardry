@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\pixelwizardry\\testing\\pawnrendernode_animalrandomizedgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|solutionrelative:pixelwizardry\\testing\\pawnrendernode_animalrandomizedgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\pixelwizardry\\testing\\companimalcolorrandomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|solutionrelative:pixelwizardry\\testing\\companimalcolorrandomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|s:\\games\\steam\\steamapps\\common\\rimworld\\mods\\pixelwizardry\\source\\pixelwizardry\\pixelwizardry\\testing\\companimalcolorbasedstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{099412E4-82A2-458F-AEDA-EB6122160AA6}|PixelWizardry\\PixelWizardry.csproj|solutionrelative:pixelwizardry\\testing\\companimalcolorbasedstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CompAnimalColorBasedStats.cs",
+              "DocumentMoniker": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\CompAnimalColorBasedStats.cs",
+              "RelativeDocumentMoniker": "PixelWizardry\\Testing\\CompAnimalColorBasedStats.cs",
+              "ToolTip": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\CompAnimalColorBasedStats.cs",
+              "RelativeToolTip": "PixelWizardry\\Testing\\CompAnimalColorBasedStats.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T00:57:41.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompAnimalColorRandomizer.cs",
+              "DocumentMoniker": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\CompAnimalColorRandomizer.cs",
+              "RelativeDocumentMoniker": "PixelWizardry\\Testing\\CompAnimalColorRandomizer.cs",
+              "ToolTip": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\CompAnimalColorRandomizer.cs",
+              "RelativeToolTip": "PixelWizardry\\Testing\\CompAnimalColorRandomizer.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T03:58:21.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "DocumentMoniker": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "RelativeDocumentMoniker": "PixelWizardry\\Testing\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "ToolTip": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\PixelWizardry\\Source\\PixelWizardry\\PixelWizardry\\Testing\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "RelativeToolTip": "PixelWizardry\\Testing\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T17:26:55.775Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,3 +2,4 @@ S:\Games\Steam\steamapps\common\RimWorld\Mods\PixelWizardry\Assemblies\PixelWiza
 S:\Games\Steam\steamapps\common\RimWorld\Mods\PixelWizardry\Source\PixelWizardry\PixelWizardry\obj\Debug\PixelWizardry.csproj.AssemblyReference.cache
 S:\Games\Steam\steamapps\common\RimWorld\Mods\PixelWizardry\Source\PixelWizardry\PixelWizardry\obj\Debug\PixelWizardry.csproj.CoreCompileInputs.cache
 S:\Games\Steam\steamapps\common\RimWorld\Mods\PixelWizardry\Source\PixelWizardry\PixelWizardry\obj\Debug\PixelWizardry.dll
+S:\Games\Steam\steamapps\common\RimWorld\Mods\PixelWizardry\1.5\Assemblies\PixelWizardry.dll

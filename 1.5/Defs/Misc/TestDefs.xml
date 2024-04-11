@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- test game condition -->
+
+    <GameConditionDef>
+        <defName>PW_TestCondition</defName>
+        <conditionClass>PixelWizardry.GameCondition_TestCondition</conditionClass>
+        <label>test condition</label>
+        <description>testing</description>
+        <descriptionFuture>testing</descriptionFuture>
+        <endMessage>testing</endMessage>
+        <letterText>testing</letterText>
+        <letterDef>PositiveEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
+        <allowUnderground>false</allowUnderground>
+    </GameConditionDef>
+
+    <!-- test building -->
+
+	<ThingDef ParentName="BuildingBase">
+        <defName>PW_BuildingTestDef</defName>
+        <label>building test def</label>
+		<drawerType>MapMeshAndRealTime</drawerType>
+    	<tickerType>Normal</tickerType>
+		<altitudeLayer>MoteOverheadLow</altitudeLayer>
+		<!-- <stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1</costStuffCount> -->
+        <description>this had to be a full def... so yeah, here it is</description>
+        <graphicData>
+            <texPath>PixelWizardry/blank</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(2, 2)</drawSize>
+			<drawOffset>(0, 0, 0)</drawOffset>
+			<onGroundRandomRotateAngle></onGroundRandomRotateAngle>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+			<flipExtraRotation>0</flipExtraRotation>
+			<renderInstanced>false</renderInstanced>
+			<allowAtlasing>false</allowAtlasing>
+			<overlayOpacity>1</overlayOpacity>
+			<addTopAltitudeBias>false</addTopAltitudeBias>
+			<ignoreThingDrawColor>false</ignoreThingDrawColor>
+			<linkType>None</linkType>
+			<linkFlags>None</linkFlags>
+			<shadowData>
+				<volume>(0, 0, 0)</volume>
+				<offset>(0, 0, 0)</offset>
+			</shadowData>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+			<!-- <shaderParameters>
+				<_Color>(0.2, 0.85, 0.4, 1)</_Color>
+			</shaderParameters> -->
+        </graphicData>
+		<comps>
+			<li Class="PixelWizardry.CompProperties_ShaderTest">
+			  	<moteDef>PW_MoteTestDef</moteDef>
+				<!-- <moteColor>(1, 1, 1, 1)</moteColor> -->
+			</li>
+		</comps>
+    </ThingDef>
+
+	<!-- test mote -->
+
+	<ThingDef ParentName="MoteBase">
+		<defName>PW_MoteTestDef</defName>
+		<thingClass>MoteThrown</thingClass>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<mote>
+			<solidTime>99999</solidTime>
+			<needsMaintenance>True</needsMaintenance>
+		</mote>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>PixelWizardry/testTransparent</texPath>
+			<shaderParameters>
+				<_Color>(0, 0.85, 0.35, 1)</_Color>
+			</shaderParameters>
+			<drawSize>3</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<!-- test pawn render tree  -->
+
+	<PawnRenderTreeDef>
+		<defName>PW_AnimalRandomizedColors</defName>
+		<root Class="PawnRenderNodeProperties_Parent">
+			<debugLabel>Root</debugLabel>
+			<tagDef>Root</tagDef>
+			<children>
+				<li>
+					<debugLabel>Body</debugLabel>
+					<tagDef>Body</tagDef>
+					<useRottenColor>true</useRottenColor>
+					<nodeClass>PixelWizardry.PawnRenderNode_AnimalRandomizedGraphics</nodeClass>
+				</li>
+			</children>
+		</root>
+	</PawnRenderTreeDef>
+
+	<!-- test thing (race)  -->
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>PW_TestAnimal</defName>
+		<label>test animal</label>
+		<description>test animal</description>
+		<statBases>
+			<MoveSpeed>5.0</MoveSpeed>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<MarketValue>250</MarketValue>
+			<FilthRate>2</FilthRate>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<renderTree>PW_AnimalRandomizedColors</renderTree>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<herdAnimal>false</herdAnimal>
+			<predator>true</predator>
+			<maxPreyBodySize>1.0</maxPreyBodySize>
+			<baseBodySize>0.6</baseBodySize>
+			<baseHungerRate>0.12</baseHungerRate>
+			<baseHealthScale>0.8</baseHealthScale>
+			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+			<leatherDef>Leather_Panthera</leatherDef>
+			<wildness>0.80</wildness>
+			<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+			<gestationPeriodDays>10</gestationPeriodDays>
+			<lifeExpectancy>9</lifeExpectancy>
+			<soundEating>PredatorSmall_Eat</soundEating>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Cougar_Injured</soundWounded>
+					<soundDeath>Pawn_Cougar_Death</soundDeath>
+					<soundAngry>Pawn_Cougar_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.03, 0, 0.17)</li>
+				<li>(0.32, 0, 0)</li>
+				<li>(0.03, 0, -0.13)</li>
+				<li>(-0.32, 0, 0)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+		<comps>
+			<li Class="PixelWizardry.CompProperties_AnimalColorBasedStats" />
+            <li Class="PixelWizardry.CompProperties_AnimalColorRandomizer">
+                <rRangeOne>0.5~0.7</rRangeOne> <!-- red 1 -->
+				<gRangeOne>0.3~.5</gRangeOne> <!-- green 1 -->
+				<bRangeOne>0.1~0.3</bRangeOne> <!-- blue 1 -->
+
+				<rRangeTwo>0.1~0.8</rRangeTwo> <!-- red 2 -->
+				<gRangeTwo>0.04~0.24</gRangeTwo> <!-- green 2 -->
+				<bRangeTwo>0.0~0.1</bRangeTwo> <!-- blue 2 -->
+            </li>
+        </comps>
+	</ThingDef>
+
+	<!-- test pawnkind -->
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PW_TestAnimal</defName>
+		<label>test animal</label>
+		<labelPlural>test animals</labelPlural>
+		<race>PW_TestAnimal</race>
+		<combatPower>80</combatPower>
+		<ecoSystemWeight>0.22</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<label>adult test animal</label>
+				<bodyGraphicData>
+					<texPath>PixelWizardry/TestDucko/TestCircle</texPath>
+					<drawSize>1</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Lynx/Dessicated_Lynx</texPath>
+					<drawSize>1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

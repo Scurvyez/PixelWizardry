@@ -26,39 +26,39 @@ namespace PixelWizardry
             {
                 if (PWModSettings.ProtanopiaMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Protanopia);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Protanopia);
                 }
                 else if (PWModSettings.ProtanomalyMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Protanomaly);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Protanomaly);
                 }
                 else if (PWModSettings.DeuteranopiaMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Deuteranopia);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Deuteranopia);
                 }
                 else if (PWModSettings.DeuteranomalyMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Deuteranomaly);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Deuteranomaly);
                 }
                 else if (PWModSettings.TritanopiaMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Tritanopia);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Tritanopia);
                 }
                 else if (PWModSettings.TritanomalyMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Tritanomaly);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Tritanomaly);
                 }
                 else if (PWModSettings.AchromatopsiaMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Achromatopsia);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Achromatopsia);
                 }
                 else if (PWModSettings.AchromatomalyMode)
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Achromatomaly);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Achromatomaly);
                 }
                 else
                 {
-                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.colorBlindModeMat, ColorBlindnessUtility.ColorBlindMode.Normal);
+                    ColorBlindnessUtility.SetColorBlindnessProperties(fullScreenEffects.cBMMat, ColorBlindnessUtility.ColorBlindMode.Normal);
                 }
             }
 
@@ -73,8 +73,8 @@ namespace PixelWizardry
             {
                 Log.Message($"Tracked Pawn is {trackedPawn}");
                 trackedPosition = trackedPawn.DrawPos;
-                //fullScreenEffects.screenPositionEffectsMat.SetTexture("_SecondaryTex", TexButtons._SecondaryTex);
-                fullScreenEffects.screenPositionEffectsMat.SetVector("_TrackedPosition", trackedPosition);
+                //fullScreenEffects.sPEMat.SetTexture("_SecondaryTex", TexButtons._SecondaryTex);
+                fullScreenEffects.sPEMat.SetVector("_TrackedPosition", trackedPosition);
             }
         }
     }
