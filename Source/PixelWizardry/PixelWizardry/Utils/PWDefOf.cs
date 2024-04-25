@@ -6,8 +6,8 @@ namespace PixelWizardry
     [DefOf]
     public class PWDefOf
     {
-        public static ThingDef PW_MoteTestDef;
-        public static PawnKindDef PW_TestAnimal;
+        //public static ThingDef PW_MoteTestDef;
+        //public static PawnKindDef PW_TestAnimal;
 
         static PWDefOf()
         {

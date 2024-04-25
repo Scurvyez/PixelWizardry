@@ -102,18 +102,28 @@ namespace PixelWizardry
             list.Label("HSV Settings");
             list.Gap(3.0f);
 
-            int decimalPlaces = 2;
+            int decimalPlaces = 0;
+            int sliderMinInt = 0;
+            int sliderMaxInt = 200; // this is 2 * 10^decimalPlaces
+            int normFactor = 2; // normalization factor
+            float sliderMultiplier = Mathf.Pow(10f, normFactor);
 
             list.CheckboxLabeled("PW_EnableHSVAdjustment".Translate(), ref settings._EnableHSVAdjustment, "PW_EnableHSVAdjustmentDesc".Translate());
 
-            list.Label(label: "PW_HAmount".Translate((settings._HAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_HAmountDesc".Translate());
-            settings._HAmount = list.Slider(settings._HAmount, 0f, 2f);
+            list.Label(label: "PW_HAmount".Translate((settings._HAmount * sliderMultiplier).ToString($"F{decimalPlaces}")), tooltip: "PW_HAmountDesc".Translate());
+            int hAmountInt = Mathf.RoundToInt(settings._HAmount * sliderMultiplier);
+            hAmountInt = Mathf.RoundToInt(list.Slider(hAmountInt, sliderMinInt, sliderMaxInt));
+            settings._HAmount = hAmountInt / (sliderMaxInt / 2f); // normalize to [0.0, 2.0]
 
-            list.Label(label: "PW_SAmount".Translate((settings._SAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_SAmountDesc".Translate());
-            settings._SAmount = list.Slider(settings._SAmount, 0f, 2f);
+            list.Label(label: "PW_SAmount".Translate((settings._SAmount * sliderMultiplier).ToString($"F{decimalPlaces}")), tooltip: "PW_SAmountDesc".Translate());
+            int sAmountInt = Mathf.RoundToInt(settings._SAmount * sliderMultiplier);
+            sAmountInt = Mathf.RoundToInt(list.Slider(sAmountInt, sliderMinInt, sliderMaxInt));
+            settings._SAmount = sAmountInt / (sliderMaxInt / 2f);
 
-            list.Label(label: "PW_VAmount".Translate((settings._VAmount).ToString($"F{decimalPlaces}")), tooltip: "PW_VAmountDesc".Translate());
-            settings._VAmount = list.Slider(settings._VAmount, 0f, 2f);
+            list.Label(label: "PW_VAmount".Translate((settings._VAmount * sliderMultiplier).ToString($"F{decimalPlaces}")), tooltip: "PW_VAmountDesc".Translate());
+            int vAmountInt = Mathf.RoundToInt(settings._VAmount * sliderMultiplier);
+            vAmountInt = Mathf.RoundToInt(list.Slider(vAmountInt, sliderMinInt, sliderMaxInt));
+            settings._VAmount = vAmountInt / (sliderMaxInt / 2f);
 
             list.Gap(15.0f);
 

@@ -75,7 +75,6 @@
     <Compile Include="Testing\GameCondition_TestCondition.cs" />
     <Compile Include="Testing\CompShaderTest.cs" />
     <Compile Include="Utils\PWDefOf.cs" />
-    <Compile Include="Utils\PWDebugActionsMisc.cs" />
     <Compile Include="Utils\ColorBlindnessUtility.cs" />
     <Compile Include="Utils\FullScreenEffects.cs" />
     <Compile Include="Utils\TexButtons.cs" />

@@ -3,7 +3,7 @@
 
     <!-- test game condition -->
 
-    <GameConditionDef>
+    <!-- <GameConditionDef>
         <defName>PW_TestCondition</defName>
         <conditionClass>PixelWizardry.GameCondition_TestCondition</conditionClass>
         <label>test condition</label>
@@ -14,22 +14,22 @@
         <letterDef>PositiveEvent</letterDef>
         <canBePermanent>true</canBePermanent>
         <allowUnderground>false</allowUnderground>
-    </GameConditionDef>
+    </GameConditionDef> -->
 
     <!-- test building -->
 
-	<ThingDef ParentName="BuildingBase">
+	<!-- <ThingDef ParentName="BuildingBase">
         <defName>PW_BuildingTestDef</defName>
         <label>building test def</label>
 		<drawerType>MapMeshAndRealTime</drawerType>
     	<tickerType>Normal</tickerType>
 		<altitudeLayer>MoteOverheadLow</altitudeLayer>
-		<!-- <stuffCategories>
+		<stuffCategories>
 			<li>Metallic</li>
 			<li>Woody</li>
 			<li>Stony</li>
 		</stuffCategories>
-		<costStuffCount>1</costStuffCount> -->
+		<costStuffCount>1</costStuffCount>
         <description>this had to be a full def... so yeah, here it is</description>
         <graphicData>
             <texPath>PixelWizardry/blank</texPath>
@@ -55,21 +55,21 @@
 			<damageData>
 				<enabled>false</enabled>
 			</damageData>
-			<!-- <shaderParameters>
+			<shaderParameters>
 				<_Color>(0.2, 0.85, 0.4, 1)</_Color>
-			</shaderParameters> -->
+			</shaderParameters>
         </graphicData>
 		<comps>
 			<li Class="PixelWizardry.CompProperties_ShaderTest">
 			  	<moteDef>PW_MoteTestDef</moteDef>
-				<!-- <moteColor>(1, 1, 1, 1)</moteColor> -->
+				<moteColor>(1, 1, 1, 1)</moteColor>
 			</li>
 		</comps>
-    </ThingDef>
+    </ThingDef> -->
 
 	<!-- test mote -->
 
-	<ThingDef ParentName="MoteBase">
+	<!-- <ThingDef ParentName="MoteBase">
 		<defName>PW_MoteTestDef</defName>
 		<thingClass>MoteThrown</thingClass>
 		<altitudeLayer>Projectile</altitudeLayer>
@@ -86,11 +86,11 @@
 			</shaderParameters>
 			<drawSize>3</drawSize>
 		</graphicData>
-	</ThingDef>
+	</ThingDef> -->
 
 	<!-- test pawn render tree  -->
 
-	<PawnRenderTreeDef>
+	<!-- <PawnRenderTreeDef>
 		<defName>PW_AnimalRandomizedColors</defName>
 		<root Class="PawnRenderNodeProperties_Parent">
 			<debugLabel>Root</debugLabel>
@@ -104,11 +104,11 @@
 				</li>
 			</children>
 		</root>
-	</PawnRenderTreeDef>
+	</PawnRenderTreeDef> -->
 
 	<!-- test thing (race)  -->
 
-	<ThingDef ParentName="AnimalThingBase">
+	<!-- <ThingDef ParentName="AnimalThingBase">
 		<defName>PW_TestAnimal</defName>
 		<label>test animal</label>
 		<description>test animal</description>
@@ -227,20 +227,20 @@
 		<comps>
 			<li Class="PixelWizardry.CompProperties_AnimalColorBasedStats" />
             <li Class="PixelWizardry.CompProperties_AnimalColorRandomizer">
-                <rRangeOne>0.5~0.7</rRangeOne> <!-- red 1 -->
-				<gRangeOne>0.3~.5</gRangeOne> <!-- green 1 -->
-				<bRangeOne>0.1~0.3</bRangeOne> <!-- blue 1 -->
+                <rRangeOne>0.5~0.7</rRangeOne>
+				<gRangeOne>0.3~.5</gRangeOne>
+				<bRangeOne>0.1~0.3</bRangeOne>
 
-				<rRangeTwo>0.1~0.8</rRangeTwo> <!-- red 2 -->
-				<gRangeTwo>0.04~0.24</gRangeTwo> <!-- green 2 -->
-				<bRangeTwo>0.0~0.1</bRangeTwo> <!-- blue 2 -->
+				<rRangeTwo>0.1~0.8</rRangeTwo>
+				<gRangeTwo>0.04~0.24</gRangeTwo>
+				<bRangeTwo>0.0~0.1</bRangeTwo>
             </li>
         </comps>
-	</ThingDef>
+	</ThingDef> -->
 
 	<!-- test pawnkind -->
 
-	<PawnKindDef ParentName="AnimalKindBase">
+	<!-- <PawnKindDef ParentName="AnimalKindBase">
 		<defName>PW_TestAnimal</defName>
 		<label>test animal</label>
 		<labelPlural>test animals</labelPlural>
@@ -261,6 +261,6 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
-	</PawnKindDef>
+	</PawnKindDef> -->
 
 </Defs>
