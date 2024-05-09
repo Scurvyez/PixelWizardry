@@ -1,1 +1,1 @@
-[[https://github.com/Scurvyez/PixelWizardry/blob/master/About/Preview.png]]
+!(https://github.com/Scurvyez/PixelWizardry/blob/master/About/Preview.png)
