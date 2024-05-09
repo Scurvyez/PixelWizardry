@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -31,7 +32,7 @@ namespace PixelWizardry
                 if (bundleInt == null)
                 {
                     bundleInt = PixelWizardryMod.mod.MainBundle;
-                    //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>bundleInt:</color> " + bundleInt.name);
+                    //PWLog.Message("bundleInt: " + bundleInt.name);
                 }
                 return bundleInt;
             }
@@ -45,39 +46,20 @@ namespace PixelWizardry
             }
             if (!lookupShaders.ContainsKey(shaderName))
             {
-                //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] lookupShaders: " + lookupShaders.ToList().Count);
+               // PWLog.Message("lookupShaders: " + lookupShaders.ToList().Count);
                 lookupShaders[shaderName] = PWBundle.LoadAsset<Shader>(shaderName);
             }
             Shader shader = lookupShaders[shaderName];
             if (shader == null)
             {
-                Log.Warning("[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>Could not load shader:</color> " + shaderName);
+                PWLog.Warning("Could not load shader: " + shaderName);
                 return ShaderDatabase.DefaultShader;
             }
             if (shader != null)
             {
-                //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] Loaded shaders: " + lookupShaders.Count );
+                //PWLog.Message("Loaded shaders: " + lookupShaders.Count );
             }
             return shader;
-        }
-
-        public static Material LoadMaterial(string materialName)
-        {
-            if (lookupMaterials == null)
-            {
-                lookupMaterials = new Dictionary<string, Material>();
-            }
-            if (!lookupMaterials.ContainsKey(materialName))
-            {
-                lookupMaterials[materialName] = PWBundle.LoadAsset<Material>(materialName);
-            }
-            Material material = lookupMaterials[materialName];
-            if (material == null)
-            {
-                Log.Warning("[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>Could not load material:</color> " + materialName);
-                return BaseContent.BadMat;
-            }
-            return material;
         }
     }
 }

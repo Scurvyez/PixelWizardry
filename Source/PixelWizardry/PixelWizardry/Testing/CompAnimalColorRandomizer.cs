@@ -23,8 +23,8 @@ namespace PixelWizardry
     {
         public CompProperties_AnimalColorRandomizer Props => (CompProperties_AnimalColorRandomizer)props;
 
-        public Color newColor = new Color();
-        public Color newColorTwo = new Color();
+        public Color newColor = new ();
+        public Color newColorTwo = new ();
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {

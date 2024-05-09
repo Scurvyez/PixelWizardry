@@ -32,7 +32,7 @@ namespace PixelWizardry
                 ___shaderInt = PWContentDatabase.PWBundle.LoadAsset<Shader>(__instance.shaderPath);
                 if (___shaderInt is null)
                 {
-                    Log.Message($"[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>Failed to load Shader from path <text>\"{__instance.shaderPath}\"</text></color>");
+                    PWLog.Error($"Failed to load Shader from path <text>\"{__instance.shaderPath}\"</text>");
                 }
             }
         }
@@ -55,18 +55,18 @@ namespace PixelWizardry
                     text = "StandaloneLinux64";
                 }
                 string bundlePath = Path.Combine(base.Content.RootDir, "Materials\\Bundles\\" + text + "\\pixelwizardrybundle");
-                //Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] Bundle Path: " + bundlePath);
+                //PWLog.Message("Bundle Path: " + bundlePath);
 
                 AssetBundle bundle = AssetBundle.LoadFromFile(bundlePath);
 
                 if (bundle == null)
                 {
-                    Log.Message("[<color=#4494E3FF>Pixel Wizardry</color>] <color=#e36c45FF>Failed to load bundle at path:</color> " + bundlePath);
+                    PWLog.Error("Failed to load bundle at path: " + bundlePath);
                 }
 
                 foreach (var allAssetName in bundle.GetAllAssetNames())
                 {
-                    //Log.Message($"[<color=#4494E3FF>Pixel Wizardry</color>] - [{allAssetName}]");
+                    //PWLog.Message($"[{allAssetName}]");
                 }
 
                 return bundle;

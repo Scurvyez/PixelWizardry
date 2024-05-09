@@ -74,6 +74,7 @@
     <Compile Include="Testing\CompAnimalColorRandomizer.cs" />
     <Compile Include="Testing\GameCondition_TestCondition.cs" />
     <Compile Include="Testing\CompShaderTest.cs" />
+    <Compile Include="Utils\PWLog.cs" />
     <Compile Include="Utils\PWDefOf.cs" />
     <Compile Include="Utils\ColorBlindnessUtility.cs" />
     <Compile Include="Utils\FullScreenEffects.cs" />
