@@ -126,13 +126,6 @@ namespace PixelWizardry
             settings._VAmount = vAmountInt / (sliderMaxInt / 2f);
 
             list.Gap(15.0f);
-
-            // Screen Position Effects Settings
-            list.Label("Screen Position Effects Settings");
-            list.Gap(3.0f);
-
-            list.CheckboxLabeled("PW_EnableScreenPositionEffects".Translate(), ref settings._EnableScreenPositionEffects, "PW_EnableScreenPositionEffectsDesc".Translate());
-
             list.End();
         }
 
@@ -162,130 +155,30 @@ namespace PixelWizardry
         public bool _TritanomalyMode = false;
         public bool _AchromatopsiaMode = false;
         public bool _AchromatomalyMode = false;
-
+        
         public bool _EnableHSVAdjustment = false;
         public float _HAmount = 1f;
         public float _SAmount = 1f;
         public float _VAmount = 1f;
-
-        public bool _EnableScreenPositionEffects = false;
         
         public PWModSettings()
         {
             _instance = this;
         }
-
-        public static bool EnableColorBlindModes
-        {
-            get
-            {
-                return _instance._EnableColorBlindModes;
-            }
-        }
-
-        public static bool ProtanopiaMode
-        {
-            get
-            {
-                return _instance._ProtanopiaMode;
-            }
-        }
-
-        public static bool ProtanomalyMode
-        {
-            get
-            {
-                return _instance._ProtanomalyMode;
-            }
-        }
-
-        public static bool DeuteranopiaMode
-        {
-            get
-            {
-                return _instance._DeuteranopiaMode;
-            }
-        }
-
-        public static bool DeuteranomalyMode
-        {
-            get
-            {
-                return _instance._DeuteranomalyMode;
-            }
-        }
-
-        public static bool TritanopiaMode
-        {
-            get
-            {
-                return _instance._TritanopiaMode;
-            }
-        }
-
-        public static bool TritanomalyMode
-        {
-            get
-            {
-                return _instance._TritanomalyMode;
-            }
-        }
-
-        public static bool AchromatopsiaMode
-        {
-            get
-            {
-                return _instance._AchromatopsiaMode;
-            }
-        }
-
-        public static bool AchromatomalyMode
-        {
-            get
-            {
-                return _instance._AchromatomalyMode;
-            }
-        }
-
-        public static bool EnableHSVAdjustment
-        {
-            get
-            {
-                return _instance._EnableHSVAdjustment;
-            }
-        }
-
-        public static float HAmount
-        {
-            get
-            {
-                return _instance._HAmount;
-            }
-        }
-
-        public static float SAmount
-        {
-            get
-            {
-                return _instance._SAmount;
-            }
-        }
-
-        public static float VAmount
-        {
-            get
-            {
-                return _instance._VAmount;
-            }
-        }
-
-        public static bool EnableScreenPositionEffects
-        {
-            get
-            {
-                return _instance._EnableScreenPositionEffects;
-            }
-        }
+        
+        public static bool EnableColorBlindModes => _instance._EnableColorBlindModes;
+        public static bool ProtanopiaMode => _instance._ProtanopiaMode;
+        public static bool ProtanomalyMode => _instance._ProtanomalyMode;
+        public static bool DeuteranopiaMode => _instance._DeuteranopiaMode;
+        public static bool DeuteranomalyMode => _instance._DeuteranomalyMode;
+        public static bool TritanopiaMode => _instance._TritanopiaMode;
+        public static bool TritanomalyMode => _instance._TritanomalyMode;
+        public static bool AchromatopsiaMode => _instance._AchromatopsiaMode;
+        public static bool AchromatomalyMode => _instance._AchromatomalyMode;
+        public static bool EnableHSVAdjustment => _instance._EnableHSVAdjustment;
+        public static float HAmount => _instance._HAmount;
+        public static float SAmount => _instance._SAmount;
+        public static float VAmount => _instance._VAmount;
 
         public override void ExposeData()
         {
@@ -305,8 +198,6 @@ namespace PixelWizardry
             Scribe_Values.Look(ref _HAmount, "_HAmount", 1f);
             Scribe_Values.Look(ref _SAmount, "_SAmount", 1f);
             Scribe_Values.Look(ref _VAmount, "_VAmount", 1f);
-
-            Scribe_Values.Look(ref _EnableScreenPositionEffects, "_EnableScreenPositionEffects", false);
         }
     }
 }

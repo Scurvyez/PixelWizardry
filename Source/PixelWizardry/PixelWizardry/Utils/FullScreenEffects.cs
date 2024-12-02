@@ -7,7 +7,6 @@ namespace PixelWizardry
     {
         public Material cBMMat;
         public Material hsvMat;
-        public Material sPEMat;
 
         public static FullScreenEffects instance;
 
@@ -16,7 +15,6 @@ namespace PixelWizardry
             instance = this;
             cBMMat = new Material(PWContentDatabase.ScreenColorBlindness);
             hsvMat = new Material(PWContentDatabase.ScreenHSV);
-            sPEMat = new Material (PWContentDatabase.ScreenPositionEffects);
         }
 
         public void OnRenderImage(RenderTexture source, RenderTexture destination)
@@ -28,10 +26,6 @@ namespace PixelWizardry
             else if (PWModSettings.EnableHSVAdjustment)
             {
                 Graphics.Blit(source, destination, hsvMat);
-            }
-            else if (PWModSettings.EnableScreenPositionEffects)
-            {
-                Graphics.Blit(source, destination, sPEMat);
             }
             else 
             {

@@ -66,6 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MapComps\MapComp_TESTING.cs" />
+    <Compile Include="MapComps\MapComp_UpdatePathHeatMapShader.cs" />
     <Compile Include="PixelWizardryMain.cs" />
     <Compile Include="MapComps\MapComp_UpdateColorBlindnessShader.cs" />
     <Compile Include="Harmony\CurrentNotify_LoadedSceneChanged_Postfix.cs" />

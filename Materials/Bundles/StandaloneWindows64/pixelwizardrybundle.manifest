@@ -1,21 +1,23 @@
 ManifestFileVersion: 0
-CRC: 3449725673
+CRC: 3787363790
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 92ce53ad6c708cac2f16bc5e6c95e4e9
+    Hash: c5208d24292377e3b45c8de9bb5e4822
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+    Hash: d6617f579a21db6914d356f34a6c9a37
 HashAppended: 0
 ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
+- Class: 72
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/BlendLinearDodge.shader
-- Assets/TEST.shader
 - Assets/BlendLinearBurn.shader
+- Assets/HeatMapEffect.shader
 - Assets/ScreenColorBlindness.shader
 - Assets/BlendMultiply.shader
 - Assets/ScreenHSV.shader
@@ -23,6 +25,7 @@ Assets:
 - Assets/BlendTransparentRGBToGrayscale.shader
 - Assets/BlendScreen.shader
 - Assets/BlendTransparentRGBToBlack.shader
+- Assets/TESTING.compute
 - Assets/BlendSubtract.shader
-- Assets/ScreenPositionEffects.shader
+- Assets/PathHeatMap.compute
 Dependencies: []

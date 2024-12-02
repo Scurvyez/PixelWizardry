@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 240320162
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 04d9c50a3f651c0009115014bdcb22a4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ScreenColorBlindness.shader
+Dependencies: []

@@ -7,16 +7,7 @@ namespace PixelWizardry
     {
         FullScreenEffects fullScreenEffects = FullScreenEffects.instance;
 
-        private Pawn trackedPawn;
-        private Vector3 trackedPosition;
-
         public MapComp_UpdateColorBlindnessShader(Map map) : base(map) { }
-
-        public override void FinalizeInit()
-        {
-            base.FinalizeInit();
-            trackedPawn = map.mapPawns.AllPawnsSpawned.RandomElement();
-        }
 
         public override void MapComponentTick()
         {
@@ -67,14 +58,6 @@ namespace PixelWizardry
                 fullScreenEffects.hsvMat.SetFloat("_H", PWModSettings.HAmount);
                 fullScreenEffects.hsvMat.SetFloat("_S", PWModSettings.SAmount);
                 fullScreenEffects.hsvMat.SetFloat("_V", PWModSettings.VAmount);
-            }
-
-            if (PWModSettings.EnableScreenPositionEffects)
-            {
-                Log.Message($"Tracked Pawn is {trackedPawn}");
-                trackedPosition = trackedPawn.DrawPos;
-                //fullScreenEffects.sPEMat.SetTexture("_SecondaryTex", TexButtons._SecondaryTex);
-                fullScreenEffects.sPEMat.SetVector("_TrackedPosition", trackedPosition);
             }
         }
     }

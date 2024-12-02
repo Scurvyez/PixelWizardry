@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -11,7 +10,8 @@ namespace PixelWizardry
     {
         private static AssetBundle bundleInt;
         private static Dictionary<string, Shader> lookupShaders;
-        private static Dictionary<string, Material> lookupMaterials;
+        private static Dictionary<string, ComputeShader> lookupComputeShaders;
+        
         public static readonly Shader BlendLinearDodge = LoadShader(Path.Combine("Assets", "BlendLinearDodge.shader"));
         public static readonly Shader BlendSubtract = LoadShader(Path.Combine("Assets", "BlendSubtract.shader"));
         public static readonly Shader BlendScreen = LoadShader(Path.Combine("Assets", "BlendScreen.shader"));
@@ -22,44 +22,60 @@ namespace PixelWizardry
         public static readonly Shader RGBToHSV = LoadShader(Path.Combine("Assets", "RGBToHSV.shader"));
         public static readonly Shader ScreenColorBlindness = LoadShader(Path.Combine("Assets", "ScreenColorBlindness.shader"));
         public static readonly Shader ScreenHSV = LoadShader(Path.Combine("Assets", "ScreenHSV.shader"));
-        public static readonly Shader ScreenPositionEffects = LoadShader(Path.Combine("Assets", "ScreenPositionEffects.shader"));
-        public static readonly Shader TEST = LoadShader(Path.Combine("Assets", "TEST.shader"));
-
+        public static readonly Shader HeatmapEffect = LoadShader(Path.Combine("Assets", "HeatMapEffect.shader"));
+        
+        public static readonly ComputeShader PathHeatmap = LoadComputeShader(Path.Combine("Assets", "PathHeatMap.compute"));
+        public static readonly ComputeShader TESTING = LoadComputeShader(Path.Combine("Assets", "TESTING.compute"));
+        
         public static AssetBundle PWBundle
         {
             get
             {
-                if (bundleInt == null)
-                {
-                    bundleInt = PixelWizardryMod.mod.MainBundle;
-                    //PWLog.Message("bundleInt: " + bundleInt.name);
-                }
+                if (bundleInt != null) return bundleInt;
+                bundleInt = PixelWizardryMod.mod.MainBundle;
+                PWLog.Message("bundleInt: " + bundleInt.name);
                 return bundleInt;
             }
         }
-
-        public static Shader LoadShader(string shaderName)
+        
+        private static Shader LoadShader(string shaderName)
         {
-            if (lookupShaders == null)
-            {
-                lookupShaders = new Dictionary<string, Shader>();
-            }
+            lookupShaders ??= new Dictionary<string, Shader>();
+            
             if (!lookupShaders.ContainsKey(shaderName))
             {
-               // PWLog.Message("lookupShaders: " + lookupShaders.ToList().Count);
                 lookupShaders[shaderName] = PWBundle.LoadAsset<Shader>(shaderName);
             }
+            
             Shader shader = lookupShaders[shaderName];
             if (shader == null)
             {
-                PWLog.Warning("Could not load shader: " + shaderName);
+                PWLog.Warning($"Failed to load shader: {shaderName}");
                 return ShaderDatabase.DefaultShader;
             }
-            if (shader != null)
-            {
-                //PWLog.Message("Loaded shaders: " + lookupShaders.Count );
-            }
+            
+            PWLog.Message($"Successfully loaded shader: {shaderName}");
             return shader;
+        }
+
+        public static ComputeShader LoadComputeShader(string computeShaderName)
+        {
+            lookupComputeShaders ??= new Dictionary<string, ComputeShader>();
+
+            if (!lookupComputeShaders.ContainsKey(computeShaderName))
+            {
+                lookupComputeShaders[computeShaderName] = PWBundle.LoadAsset<ComputeShader>(computeShaderName);
+            }
+            
+            ComputeShader computeShader = lookupComputeShaders[computeShaderName];
+            if (computeShader == null)
+            {
+                PWLog.Warning($"Failed to load compute shader: {computeShaderName}");
+                return null;
+            }
+
+            PWLog.Message($"Successfully loaded compute shader: {computeShaderName}");
+            return computeShader;
         }
     }
 }
