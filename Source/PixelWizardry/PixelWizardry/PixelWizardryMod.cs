@@ -24,7 +24,7 @@ namespace PixelWizardry
 
             harmony.PatchAll();
         }
-
+        
         public static void ShaderFromAssetBundle(ShaderTypeDef __instance, ref Shader ___shaderInt)
         {
             if (__instance is PWShaderTypeDef)
@@ -36,7 +36,7 @@ namespace PixelWizardry
                 }
             }
         }
-
+        
         public AssetBundle MainBundle
         {
             get

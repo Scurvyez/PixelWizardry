@@ -17,6 +17,7 @@ namespace PixelWizardry
             {
                 cameraObject = Find.Camera.gameObject;
                 cameraObject.AddComponent<FullScreenEffects>();
+                cameraObject.AddComponent<HeatMapRenderer>();
             }
         }
     }

@@ -57,8 +57,8 @@ namespace PixelWizardry
             PWLog.Message($"Successfully loaded shader: {shaderName}");
             return shader;
         }
-
-        public static ComputeShader LoadComputeShader(string computeShaderName)
+        
+        private static ComputeShader LoadComputeShader(string computeShaderName)
         {
             lookupComputeShaders ??= new Dictionary<string, ComputeShader>();
 
