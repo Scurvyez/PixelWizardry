@@ -1,31 +1,31 @@
 ManifestFileVersion: 0
-CRC: 1142171321
+CRC: 3714822309
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 91938258864ca4410889c08e4bd39faf
+    Hash: fb1302f3edb75515c66a985db4c8118c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d6617f579a21db6914d356f34a6c9a37
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
 HashAppended: 0
 ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
-- Class: 72
-  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/BlendLinearDodge.shader
-- Assets/BlendLinearBurn.shader
-- Assets/HeatMapEffect.shader
-- Assets/ScreenColorBlindness.shader
-- Assets/BlendMultiply.shader
-- Assets/ScreenHSV.shader
-- Assets/RGBToHSV.shader
-- Assets/BlendTransparentRGBToGrayscale.shader
-- Assets/BlendScreen.shader
-- Assets/BlendTransparentRGBToBlack.shader
-- Assets/TESTING.compute
-- Assets/BlendSubtract.shader
-- Assets/PathHeatMap.compute
+- Assets/Shaders/Unlit/BlendLinearDodge.shader
+- Assets/Shaders/Unlit/Cutout_LUT.shader
+- Assets/Shaders/Unlit/BlendLinearBurn.shader
+- Assets/Shaders/Unlit/BlendVividLight.shader
+- Assets/Shaders/Unlit/BlendMultiply.shader
+- Assets/Shaders/Unlit/BlendOverlay.shader
+- Assets/Shaders/Unlit/ScreenHSV.shader
+- Assets/Shaders/Unlit/RGBToHSV.shader
+- Assets/Shaders/Unlit/BlendTransparentRGBToGrayscale.shader
+- Assets/Shaders/Unlit/BlendScreen.shader
+- Assets/Shaders/Unlit/BlendHardLight.shader
+- Assets/Shaders/Unlit/BlendTransparentRGBToBlack.shader
+- Assets/Shaders/Unlit/BlendSubtract.shader
+- Assets/Shaders/Unlit/BlendSoftLight.shader
+- Assets/Shaders/Unlit/BlendTransparentSepiaTone.shader
 Dependencies: []

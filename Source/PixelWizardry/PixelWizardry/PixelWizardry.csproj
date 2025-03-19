@@ -66,27 +66,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapComps\MapComp_TESTING.cs" />
-    <Compile Include="MapComps\MapComp_UpdatePathHeatMapShader.cs" />
-    <Compile Include="PixelWizardryMain.cs" />
-    <Compile Include="MapComps\MapComp_UpdateColorBlindnessShader.cs" />
-    <Compile Include="Harmony\CurrentNotify_LoadedSceneChanged_Postfix.cs" />
-    <Compile Include="Testing\CompAnimalColorBasedStats.cs" />
-    <Compile Include="Testing\PawnRenderNode_AnimalRandomizedGraphics.cs" />
-    <Compile Include="Testing\CompAnimalColorRandomizer.cs" />
-    <Compile Include="Testing\GameCondition_TestCondition.cs" />
-    <Compile Include="Testing\CompShaderTest.cs" />
-    <Compile Include="Utils\HeatMapRenderer.cs" />
-    <Compile Include="Utils\PWLog.cs" />
-    <Compile Include="Utils\PWDefOf.cs" />
-    <Compile Include="Utils\ColorBlindnessUtility.cs" />
-    <Compile Include="Utils\FullScreenEffects.cs" />
-    <Compile Include="Utils\TexButtons.cs" />
-    <Compile Include="PixelWizardryMod.cs" />
-    <Compile Include="Utils\PWContentDatabase.cs" />
-    <Compile Include="Utils\PWShaderPropertyIDs.cs" />
-    <Compile Include="Utils\PWShaderTypeDef.cs" />
+    <Compile Include="AssetHandling\FullScreenEffects.cs" />
+    <Compile Include="AssetHandling\PWContentDatabase.cs" />
+    <Compile Include="AssetHandling\PWShaderPropertyIDs.cs" />
+    <Compile Include="AssetHandling\PWShaderTypeDefOf.cs" />
+    <Compile Include="Debugging\Logging\PWLog.cs" />
+    <Compile Include="Debugging\ThingComps\CompProps\CompProperties_ShaderTest.cs" />
+    <Compile Include="Debugging\ThingComps\CompShaderTest.cs" />
+    <Compile Include="Defs\PWShaderTypeDef.cs" />
+    <Compile Include="Harmony\HarmonyPatches.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\PWMod.cs" />
+    <Compile Include="Settings\PWSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

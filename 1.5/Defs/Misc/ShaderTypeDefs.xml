@@ -1,59 +1,196 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!--
+		Shader properties may vary from shader to shader.
+		They can be defined in XML for a specific ThingDef in the graphicData like usual,
+		or in C# via a MaterialPropertyBlock or via direct access through the texture's Material.
+
+		Examples:
+		- if setting in XML:
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<shaderType>PWBlendLinearDodge</shaderType>
+				<texPath>Things/Items/yourTexture</texPath>
+				<shaderParameters>
+					<_Color>(0, 0.85, 0.35, 1)</_Color>
+				</shaderParameters>
+			</graphicData>
+
+		- ig setting in C#:
+			public Color newColor = Color.yellow;
+
+			yourMaterial.SetColor("_Color", newColor);
+	-->
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendHardLight</defName>
+		<shaderPath>BlendHardLight</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendLinearBurn</defName>
+		<shaderPath>BlendLinearBurn</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
 	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWBlendLinearDodge</defName>
 		<shaderPath>BlendLinearDodge</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendMultiply</defName>
+		<shaderPath>BlendMultiply</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendOverlay</defName>
+		<shaderPath>BlendOverlay</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendScreen</defName>
+		<shaderPath>BlendScreen</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendSoftLight</defName>
+		<shaderPath>BlendSoftLight</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWBlendSubtract</defName>
 		<shaderPath>BlendSubtract</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWBlendScreen</defName>
-		<shaderPath>BlendScreen</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWBlendMultiply</defName>
-		<shaderPath>BlendMultiply</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef> 
-		<defName>PWBlendLinearBurn</defName>
-		<shaderPath>BlendLinearBurn</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWBlendTransparentRGBToBlack</defName>
 		<shaderPath>BlendTransparentRGBToBlack</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
 	</PixelWizardry.PWShaderTypeDef>
 
 	<PixelWizardry.PWShaderTypeDef> 
 		<defName>PWBlendTransparentRGBToGrayscale</defName>
 		<shaderPath>BlendTransparentRGBToGrayscale</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
 	</PixelWizardry.PWShaderTypeDef>
 
-	<PixelWizardry.PWShaderTypeDef> 
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendTransparentSepiaTone</defName>
+		<shaderPath>BlendTransparentSepiaTone</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Intensity ("Intensity", Range(0,1)) = 1.0
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendVividLight</defName>
+		<shaderPath>BlendVividLight</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _Color ("Color", Vector) = (1,1,1,1)
+				- _MainTex_ST ("_MainTex_ST", Vector) = (1,1,1,1)
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWCutout_LUT</defName>
+		<shaderPath>Cutout_LUT</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main Texture", 2D) = "white" {}
+        		- _LUTTex ("LUT Mask Texture", 2D) = "white" {}
+        		- _BlendStrength ("Blend Strength", Range(0, 2)) = 0
+        		- _ColorCount ("Color Count (Minus One)", Int) = 5
+        		- _Colors[] ("Colors", []) = 6
+
+		 	How this shader works... (it's different from the others and a tiny bit more advanced)
+		 		- This shader's properties need to be set in C#, though the values can still be
+		 			defined in XML and simply linked back to C# later.
+		 		- The _LUTTex should be grayscale.
+		 		- The _BlendStrength determines how smoothly (if at all) the various color channels
+		 			of the _Colors array blend together.
+		 		- The value passed into _ColorCount NEEDS to be [_Colors - 1],
+		 			this is because the shader works by dividing up the grayscale values of the
+		 			_LUTTex into buckets, or groups. The number of buckets you want depends on
+		 			how many color channels you want for the mask. I would not recommend more than
+		 			16 even though many more are technically possible. After even just 6 channels,
+		 			the blending can get messy if the colors are really close to each other.
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
 		<defName>PWRGBToHSV</defName>
 		<shaderPath>RGBToHSV</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+				- _H ("Hue factor", float) = 1.0
+        		- _S ("Saturation factor", float) = 1.0
+        		- _V ("Value factor", float) = 1.0
+		 -->
 	</PixelWizardry.PWShaderTypeDef>
 
-	<PixelWizardry.PWShaderTypeDef>
-		<defName>PWScreenColorBlindness</defName>
-		<shaderPath>ScreenColorBlindness</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef>
-		<defName>PWScreenTrackedPositionEffects</defName>
-		<shaderPath>ScreenTrackedPositionEffects</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-
-	<PixelWizardry.PWShaderTypeDef>
-		<defName>PWTEST</defName>
-		<shaderPath>TEST</shaderPath>
-	</PixelWizardry.PWShaderTypeDef>
-	
 </Defs>

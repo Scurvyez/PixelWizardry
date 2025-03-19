@@ -1,76 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!-- test game condition -->
-
-    <!-- <GameConditionDef>
-        <defName>PW_TestCondition</defName>
-        <conditionClass>PixelWizardry.GameCondition_TestCondition</conditionClass>
-        <label>test condition</label>
-        <description>testing</description>
-        <descriptionFuture>testing</descriptionFuture>
-        <endMessage>testing</endMessage>
-        <letterText>testing</letterText>
-        <letterDef>PositiveEvent</letterDef>
-        <canBePermanent>true</canBePermanent>
-        <allowUnderground>false</allowUnderground>
-    </GameConditionDef> -->
-
-    <!-- test building -->
+	<!--
+	 	THIS IS FOR TESTING DIFFERENT SHADERS ON VARIOUS DEFS.
+	 	DO NOT DELETE.
+	 	SIMPLY CHANGE UP VALUES FOR TESTING.
+	 -->
 
 	<ThingDef ParentName="BuildingBase">
-        <defName>PW_BuildingTestDef</defName>
-        <label>building test def</label>
+		<defName>PW_BuildingTestDef</defName>
+		<label>building test def</label>
+		<description>this can't be blank...</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
-    	<tickerType>Normal</tickerType>
 		<altitudeLayer>MoteOverheadLow</altitudeLayer>
-		<!-- <stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-		<costStuffCount>1</costStuffCount> -->
-        <description>this had to be a full def... so yeah, here it is</description>
-        <graphicData>
-            <texPath>PixelWizardry/blank</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>PixelWizardry/blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Transparent</shaderType>
 			<drawSize>(2, 2)</drawSize>
-			<drawOffset>(0, 0, 0)</drawOffset>
-			<onGroundRandomRotateAngle></onGroundRandomRotateAngle>
 			<drawRotated>false</drawRotated>
-			<allowFlip>false</allowFlip>
-			<flipExtraRotation>0</flipExtraRotation>
-			<renderInstanced>false</renderInstanced>
-			<allowAtlasing>false</allowAtlasing>
-			<overlayOpacity>1</overlayOpacity>
-			<addTopAltitudeBias>false</addTopAltitudeBias>
 			<ignoreThingDrawColor>false</ignoreThingDrawColor>
-			<linkType>None</linkType>
-			<linkFlags>None</linkFlags>
-			<shadowData>
-				<volume>(0, 0, 0)</volume>
-				<offset>(0, 0, 0)</offset>
-			</shadowData>
-			<damageData>
-				<enabled>false</enabled>
-			</damageData>
-			<shaderParameters>
-				<_Color>(0.2, 0.85, 0.4, 1)</_Color>
-			</shaderParameters>
-        </graphicData>
+		</graphicData>
 		<comps>
-			<li Class="PixelWizardry.CompProperties_ShaderTest">
-			  	<moteDef>PW_MoteTestDef</moteDef>
-				<moteColor>(1, 1, 1, 1)</moteColor>
+			<li Class="PixelWizardry.CompProps.CompProperties_ShaderTest">
+				<moteDef>PW_MoteTestDefTwo</moteDef>
+				<blendStrength>0.5</blendStrength>
+				<oscillateColors>true</oscillateColors>
+				<color1>(0.97647, 0.02353, 0.02353, 1)</color1>
+				<color2>(0.82353, 0.17647, 0.17647, 1)</color2>
+				<color3>(0.70196, 0.30196, 0.30196, 1)</color3>
+				<color4>(0.97647, 0.40392, 0.02353, 1)</color4>
+				<color5>(0.80000, 0.43922, 0.20000, 1)</color5>
+				<color6>(0.65098, 0.47059, 0.34902, 1)</color6>
+
+				<color1Alt>(0.41569, 0.98431, 0.41569, 1)</color1Alt>
+				<color2Alt>(0.50588, 0.89412, 0.50588, 1)</color2Alt>
+				<color3Alt>(0.58039, 0.81961, 0.58039, 1)</color3Alt>
+				<color4Alt>(0.21961, 0.60000, 0.98039, 1)</color4Alt>
+				<color5Alt>(0.36078, 0.60000, 0.83922, 1)</color5Alt>
+				<color6Alt>(0.45882, 0.60000, 0.74118, 1)</color6Alt>
 			</li>
 		</comps>
-    </ThingDef>
+	</ThingDef>
 
-	<!-- test mote -->
-
+	<!-- 99% OF INDIVIDUAL SHADER TESTING -->
 	<ThingDef ParentName="MoteBase">
-		<defName>PW_MoteTestDef</defName>
+		<defName>PW_MoteTestDefOne</defName>
 		<thingClass>MoteThrown</thingClass>
 		<altitudeLayer>Projectile</altitudeLayer>
 		<mote>
@@ -79,188 +55,31 @@
 		</mote>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>Transparent</shaderType>
-			<texPath>PixelWizardry/testTransparent</texPath>
+			<shaderType>PWBlendTransparentSepiaTone</shaderType>
+			<texPath>PixelWizardry/testModIcon</texPath>
 			<shaderParameters>
-				<_Color>(0, 0.85, 0.35, 1)</_Color>
+				<!-- <_Color>(1, 1, 1, 1)</_Color> -->
+				<_Intensity>0.75</_Intensity>
 			</shaderParameters>
 			<drawSize>3</drawSize>
 		</graphicData>
 	</ThingDef>
 
-	<!-- test pawn render tree  -->
-
-	<!-- <PawnRenderTreeDef>
-		<defName>PW_AnimalRandomizedColors</defName>
-		<root Class="PawnRenderNodeProperties_Parent">
-			<debugLabel>Root</debugLabel>
-			<tagDef>Root</tagDef>
-			<children>
-				<li>
-					<debugLabel>Body</debugLabel>
-					<tagDef>Body</tagDef>
-					<useRottenColor>true</useRottenColor>
-					<nodeClass>PixelWizardry.PawnRenderNode_AnimalRandomizedGraphics</nodeClass>
-				</li>
-			</children>
-		</root>
-	</PawnRenderTreeDef> -->
-
-	<!-- test thing (race)  -->
-
-	<!-- <ThingDef ParentName="AnimalThingBase">
-		<defName>PW_TestAnimal</defName>
-		<label>test animal</label>
-		<description>test animal</description>
-		<statBases>
-			<MoveSpeed>5.0</MoveSpeed>
-			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
-			<MarketValue>250</MarketValue>
-			<FilthRate>2</FilthRate>
-		</statBases>
-		<tools>
-			<li>
-				<label>left claw</label>
-				<labelNoLocation>claw</labelNoLocation>
-				<capacities>
-					<li>Scratch</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>1.5</cooldownTime>
-				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li>
-							<def>Stun</def>
-							<amount>14</amount>
-						</li>
-					</extraMeleeDamages>
-				</surpriseAttack>
-			</li>
-			<li>
-				<label>right claw</label>
-				<labelNoLocation>claw</labelNoLocation>
-				<capacities>
-					<li>Scratch</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>1.5</cooldownTime>
-				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li>
-							<def>Stun</def>
-							<amount>14</amount>
-						</li>
-					</extraMeleeDamages>
-				</surpriseAttack>
-			</li>
-			<li>
-				<capacities>
-					<li>Bite</li>
-				</capacities>
-				<power>12</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-				<chanceFactor>0.7</chanceFactor>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li>
-							<def>Stun</def>
-							<amount>14</amount>
-						</li>
-					</extraMeleeDamages>
-				</surpriseAttack>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>6</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<renderTree>PW_AnimalRandomizedColors</renderTree>
-			<body>QuadrupedAnimalWithPawsAndTail</body>
-			<herdAnimal>false</herdAnimal>
-			<predator>true</predator>
-			<maxPreyBodySize>1.0</maxPreyBodySize>
-			<baseBodySize>0.6</baseBodySize>
-			<baseHungerRate>0.12</baseHungerRate>
-			<baseHealthScale>0.8</baseHealthScale>
-			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
-			<leatherDef>Leather_Panthera</leatherDef>
-			<wildness>0.80</wildness>
-			<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-			<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
-			<gestationPeriodDays>10</gestationPeriodDays>
-			<lifeExpectancy>9</lifeExpectancy>
-			<soundEating>PredatorSmall_Eat</soundEating>
-			<lifeStageAges>
-				<li>
-					<def>AnimalAdult</def>
-					<minAge>0</minAge>
-					<soundWounded>Pawn_Cougar_Injured</soundWounded>
-					<soundDeath>Pawn_Cougar_Death</soundDeath>
-					<soundAngry>Pawn_Cougar_Angry</soundAngry>
-				</li>
-			</lifeStageAges>
-			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-			<headPosPerRotation>
-				<li>(0.03, 0, 0.17)</li>
-				<li>(0.32, 0, 0)</li>
-				<li>(0.03, 0, -0.13)</li>
-				<li>(-0.32, 0, 0)</li>
-			</headPosPerRotation>
-		</race>
-		<tradeTags>
-			<li>AnimalUncommon</li>
-			<li>AnimalFighter</li>
-		</tradeTags>
-		<comps>
-			<li Class="PixelWizardry.CompProperties_AnimalColorBasedStats" />
-            <li Class="PixelWizardry.CompProperties_AnimalColorRandomizer">
-                <rRangeOne>0.5~0.7</rRangeOne>
-				<gRangeOne>0.3~0.5</gRangeOne>
-				<bRangeOne>0.1~0.3</bRangeOne>
-
-				<rRangeTwo>0.1~0.8</rRangeTwo>
-				<gRangeTwo>0.04~0.24</gRangeTwo>
-				<bRangeTwo>0.0~0.1</bRangeTwo>
-            </li>
-        </comps>
-	</ThingDef> -->
-
-	<!-- test pawnkind -->
-
-	<!-- <PawnKindDef ParentName="AnimalKindBase">
-		<defName>PW_TestAnimal</defName>
-		<label>test animal</label>
-		<labelPlural>test animals</labelPlural>
-		<race>PW_TestAnimal</race>
-		<combatPower>80</combatPower>
-		<ecoSystemWeight>0.22</ecoSystemWeight>
-		<lifeStages>
-			<li>
-				<label>adult test animal</label>
-				<bodyGraphicData>
-					<texPath>PixelWizardry/TestDucko/TestCircle</texPath>
-					<drawSize>1</drawSize>
-					<shaderType>CutoutComplex</shaderType>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Lynx/Dessicated_Lynx</texPath>
-					<drawSize>1</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
-	</PawnKindDef> -->
+	<!-- THE OTHER 1%, THE UNUSUAL SHADERS... -->
+	<ThingDef ParentName="MoteBase">
+		<defName>PW_MoteTestDefTwo</defName>
+		<thingClass>MoteThrown</thingClass>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<mote>
+			<solidTime>99999</solidTime>
+			<needsMaintenance>True</needsMaintenance>
+		</mote>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>PWCutout_LUT</shaderType>
+			<texPath>PixelWizardry/testModIconBW</texPath>
+			<drawSize>3</drawSize>
+		</graphicData>
+	</ThingDef>
 
 </Defs>
