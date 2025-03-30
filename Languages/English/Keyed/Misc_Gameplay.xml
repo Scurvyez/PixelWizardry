@@ -9,13 +9,13 @@
     <PW_EnableHSVAdjustment>Enable HSV adjustment?</PW_EnableHSVAdjustment>
     <PW_EnableHSVAdjustmentDesc>Check to allow HSV color adjustment on the map. If unchecked the below values will not be applied.</PW_EnableHSVAdjustmentDesc>
 
-    <PW_HAmount>Hue: {0}%</PW_HAmount>
+    <PW_HAmount>Hue: </PW_HAmount>
     <PW_HAmountDesc>Adjust to change the primary hue of the map.\n\nROYGBIV!</PW_HAmountDesc>
 
-    <PW_SAmount>Saturation: {0}%</PW_SAmount>
+    <PW_SAmount>Saturation: </PW_SAmount>
     <PW_SAmountDesc>Adjust to change how saturated the color of the map is.\n\n0% means grayscale while 200% means double the color!</PW_SAmountDesc>
 
-    <PW_VAmount>Value: {0}%</PW_VAmount>
+    <PW_VAmount>Value: </PW_VAmount>
     <PW_VAmountDesc>Adjust to change the overall brightness (or intensity) of the maps' color.\n\n0% means the entire screen is pure black while 200% means everything is twice as bright.</PW_VAmountDesc>
 
 </LanguageData>

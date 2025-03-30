@@ -24,6 +24,23 @@
 	-->
 
 	<PixelWizardry.PWShaderTypeDef>
+		<defName>PWBlendChromaticAberration</defName>
+		<shaderPath>BlendChromaticAberration</shaderPath>
+		<!--
+		 	SHADER PROPERTIES:
+		 		- _MainTex ("Main texture", 2D) = "white" {}
+    			- _ROffset ("Red Offset", float) = 0.1
+        		- _GOffset ("Green Offset", float) = 0.1
+        		- _BOffset ("Blue Offset", float) = 0.1
+        		- _ROffsetDir ("Red Offset Direction", Vector) = (1, 0, 0, 0)
+        		- _GOffsetDir ("Green Offset Direction", Vector) = (1, 0, 0, 0)
+       		 	- _BOffsetDir ("Blue Offset Direction", Vector) = (1, 0, 0, 0)
+    			- _EffectActive ("Effect Active (0 = No Effect, >=1 = Apply Effect)", float) = 1.0
+    			- _EffectStrength ("Effect Strength", float) = 1.0
+		 -->
+	</PixelWizardry.PWShaderTypeDef>
+
+	<PixelWizardry.PWShaderTypeDef>
 		<defName>PWBlendHardLight</defName>
 		<shaderPath>BlendHardLight</shaderPath>
 		<!--

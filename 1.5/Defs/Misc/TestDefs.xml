@@ -24,22 +24,7 @@
 		</graphicData>
 		<comps>
 			<li Class="PixelWizardry.CompProps.CompProperties_ShaderTest">
-				<moteDef>PW_MoteTestDefTwo</moteDef>
-				<blendStrength>0.5</blendStrength>
-				<oscillateColors>true</oscillateColors>
-				<color1>(0.97647, 0.02353, 0.02353, 1)</color1>
-				<color2>(0.82353, 0.17647, 0.17647, 1)</color2>
-				<color3>(0.70196, 0.30196, 0.30196, 1)</color3>
-				<color4>(0.97647, 0.40392, 0.02353, 1)</color4>
-				<color5>(0.80000, 0.43922, 0.20000, 1)</color5>
-				<color6>(0.65098, 0.47059, 0.34902, 1)</color6>
-
-				<color1Alt>(0.41569, 0.98431, 0.41569, 1)</color1Alt>
-				<color2Alt>(0.50588, 0.89412, 0.50588, 1)</color2Alt>
-				<color3Alt>(0.58039, 0.81961, 0.58039, 1)</color3Alt>
-				<color4Alt>(0.21961, 0.60000, 0.98039, 1)</color4Alt>
-				<color5Alt>(0.36078, 0.60000, 0.83922, 1)</color5Alt>
-				<color6Alt>(0.45882, 0.60000, 0.74118, 1)</color6Alt>
+				<moteDef>PW_MoteTestDefOne</moteDef>
 			</li>
 		</comps>
 	</ThingDef>
@@ -55,13 +40,19 @@
 		</mote>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>PWBlendTransparentSepiaTone</shaderType>
-			<texPath>PixelWizardry/testModIcon</texPath>
+			<shaderType>PWBlendChromaticAberration</shaderType>
+			<texPath>PixelWizardry/WhiteCircleMask</texPath>
 			<shaderParameters>
-				<!-- <_Color>(1, 1, 1, 1)</_Color> -->
-				<_Intensity>0.75</_Intensity>
+				<_ROffset>0.02</_ROffset>
+				<_GOffset>0.04</_GOffset>
+				<_BOffset>0.06</_BOffset>
+				<_ROffsetDir>(0.5, 0.5, 0, 0)</_ROffsetDir>
+				<_GOffsetDir>(0.5, 0.5, 0, 0)</_GOffsetDir>
+				<_BOffsetDir>(0.5, 0.5, 0, 0)</_BOffsetDir>
+				<_EffectActive>1</_EffectActive>
+				<_EffectStrength>1</_EffectStrength>
 			</shaderParameters>
-			<drawSize>3</drawSize>
+			<drawSize>9</drawSize>
 		</graphicData>
 	</ThingDef>
 

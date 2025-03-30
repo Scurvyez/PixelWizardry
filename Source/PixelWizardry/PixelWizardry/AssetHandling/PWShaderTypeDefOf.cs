@@ -5,6 +5,7 @@ namespace PixelWizardry
     [DefOf]
     public static class PWShaderTypeDefOf
     {
+        public static PWShaderTypeDef PWBlendChromaticAberration;
         public static PWShaderTypeDef PWBlendHardLight;
         public static PWShaderTypeDef PWBlendLinearBurn;
         public static PWShaderTypeDef PWBlendLinearDodge;

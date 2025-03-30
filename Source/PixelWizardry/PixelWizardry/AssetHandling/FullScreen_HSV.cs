@@ -2,10 +2,10 @@
 
 namespace PixelWizardry
 {
-    public class FullScreenEffects : MonoBehaviour
+    public class FullScreen_HSV : MonoBehaviour
     {
         public Material HSVMat;
-        public static FullScreenEffects Instance;
+        public static FullScreen_HSV Instance;
         
         public void Start()
         {

@@ -14,12 +14,9 @@
 Discord: steveo.o
 
 This mod adds several new shaders for use with textures for various things in-game.
-Some of the shaders produce blending effects similar to those found in programs like Photoshop.
-The currently available, thing-specific, shaders include Linear Dodge (Add), Linear Burn, Screen, Multiply, Subtract, RGBToBlack, RGBToGrayscale, and HSVToRGB.
-The only currently available fullscreen effect shader is ScreenHSV which allows the player to adjust the hue, saturation, and value (luminosity) of the entire screen.
+Some of the shaders produce blending effects similar to those found in programs like Photoshop. Some produce more intricate effects and some are full-screen, post-processing effects.
 
-See the 1.5/Defs/Misc\ShaderTypeDefs.xml for guidance on how to use the shaders in this mod.
-
+See the GitHub repo's Wiki section for guidance on how to use the shaders in this mod. Link provided above.
 More to come if I have a spark of underwhelming genius or if someone suggests a good one!
 
 A huge thanks to everyone over at the official Rimworld Discord server for all the help and motivation to finish this beast of a mod.

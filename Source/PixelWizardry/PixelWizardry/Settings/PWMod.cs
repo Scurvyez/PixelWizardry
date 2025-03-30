@@ -13,7 +13,11 @@ namespace PixelWizardry
         private readonly PWSettings _settings;
         private float _halfWidth;
         private Vector2 _leftScrollPos = Vector2.zero;
+        private const int _sliderMinInt = 0;
+        private const int _sliderMaxInt = 100;
+        
         private static Color CategoryTextColor => PWLog.MessageMsgCol;
+        public override string SettingsCategory() => "PW_ModName".Translate();
         
         public PWMod(ModContentPack content) : base(content)
         {
@@ -35,7 +39,7 @@ namespace PixelWizardry
             
             if (___shaderInt is null)
             {
-                PWLog.Error($"Failed to load Shader from path <text>\"{__instance.shaderPath}\"</text>");
+                PWLog.Error($"[PWMod] Failed to load Shader from path <text>\"{__instance.shaderPath}\"</text>");
             }
         }
         
@@ -56,7 +60,7 @@ namespace PixelWizardry
                 
                 if (bundle == null)
                 {
-                    PWLog.Error("Failed to load bundle at path: " + bundlePath);
+                    PWLog.Error("[PWMod] Failed to load bundle at path: " + bundlePath);
                 }
                 
                 // foreach (string allAssetName in bundle.GetAllAssetNames())
@@ -82,50 +86,67 @@ namespace PixelWizardry
             Widgets.BeginScrollView(viewRectLeft, ref _leftScrollPos, vROffsetLeft);
             listLeft.Begin(vROffsetLeft);
             
+            #region HSV_Settings_Main
             listLeft.Label("HSV Settings".Colorize(CategoryTextColor));
-            listLeft.Gap(3.0f);
-            
-            int decimalPlaces = 0;
-            int sliderMinInt = 0;
-            int sliderMaxInt = 200; // this is 2 * 10^decimalPlaces
-            int normFactor = 2; // normalization factor
-            float sliderMultiplier = Mathf.Pow(10f, normFactor);
-            
             listLeft.CheckboxLabeled("PW_EnableHSVAdjustment".Translate(), 
                 ref _settings._EnableHSVAdjustment, 
                 "PW_EnableHSVAdjustmentDesc".Translate());
+            listLeft.Gap(3.0f);
+            #endregion
             
-            listLeft.Label(label: "PW_HAmount".Translate((_settings._HAmount * sliderMultiplier)
-                    .ToString($"F{decimalPlaces}")), 
+            #region HSV_Settings_Hue
+            Color hueColor = Color.HSVToRGB(_settings._HAmount, 1f, 1f);
+            listLeft.Label(label: $"{"PW_HAmount".Translate()}" +
+                                  $" ({hueColor.r:F2}, {hueColor.g:F2}, {hueColor.b:F2})", 
                 tooltip: "PW_HAmountDesc".Translate());
             
-            int hAmountInt = Mathf.RoundToInt(_settings._HAmount * sliderMultiplier);
-            hAmountInt = Mathf.RoundToInt(listLeft.Slider(hAmountInt, sliderMinInt, sliderMaxInt));
-            _settings._HAmount = hAmountInt / (sliderMaxInt / 2f); // normalize to [0.0, 2.0]
+            int hAmountInt = Mathf.RoundToInt(_settings._HAmount * _sliderMaxInt);
+            hAmountInt = Mathf.RoundToInt(listLeft.Slider(hAmountInt, _sliderMinInt, _sliderMaxInt));
+            _settings._HAmount = hAmountInt / (float)_sliderMaxInt; // normalize to [0.0, 1.0]
             
-            listLeft.Label(label: "PW_SAmount".Translate((_settings._SAmount * sliderMultiplier)
-                .ToString($"F{decimalPlaces}")), 
+            Rect hueGradientRect = listLeft.GetRect(12f);
+            Widgets.DrawTextureFitted(
+                hueGradientRect,
+                SettingsHelper.GenerateHueGradient((int)vROffsetLeft.width - 12, 12), 
+                1.0f);
+            listLeft.Gap(9.0f);
+            #endregion
+            
+            #region HSV_Settings_Saturation
+            listLeft.Label(label: $"{"PW_SAmount".Translate()} " +
+                                  $"({(_settings._SAmount * 100):F0}%)", 
                 tooltip: "PW_SAmountDesc".Translate());
             
-            int sAmountInt = Mathf.RoundToInt(_settings._SAmount * sliderMultiplier);
-            sAmountInt = Mathf.RoundToInt(listLeft.Slider(sAmountInt, sliderMinInt, sliderMaxInt));
-            _settings._SAmount = sAmountInt / (sliderMaxInt / 2f);
+            int sAmountInt = Mathf.RoundToInt((_settings._SAmount - 0f) / 2f * _sliderMaxInt);
+            sAmountInt = Mathf.RoundToInt(listLeft.Slider(sAmountInt, _sliderMinInt, _sliderMaxInt));
+            _settings._SAmount = Mathf.Lerp(0f, 2f, sAmountInt / (float)_sliderMaxInt);
             
-            listLeft.Label(label: "PW_VAmount".Translate((_settings._VAmount * sliderMultiplier)
-                .ToString($"F{decimalPlaces}")), 
+            Rect satGradientRect = listLeft.GetRect(12f);
+            Widgets.DrawTextureFitted(
+                satGradientRect,
+                SettingsHelper.GenerateSaturationGradient((int)vROffsetLeft.width - 12, 12, _settings._HAmount), 
+                1.0f);
+            listLeft.Gap(9.0f);
+            #endregion
+            
+            #region HSV_Settings_Value
+            listLeft.Label(label: $"{"PW_VAmount".Translate()} " +
+                                  $"({(_settings._VAmount * 100):F0}%)", 
                 tooltip: "PW_VAmountDesc".Translate());
             
-            int vAmountInt = Mathf.RoundToInt(_settings._VAmount * sliderMultiplier);
-            vAmountInt = Mathf.RoundToInt(listLeft.Slider(vAmountInt, sliderMinInt, sliderMaxInt));
-            _settings._VAmount = vAmountInt / (sliderMaxInt / 2f);
+            int vAmountInt = Mathf.RoundToInt((_settings._VAmount - 0f) / 2f * _sliderMaxInt);
+            vAmountInt = Mathf.RoundToInt(listLeft.Slider(vAmountInt, _sliderMinInt, _sliderMaxInt));
+            _settings._VAmount = Mathf.Lerp(0f, 2f, vAmountInt / (float)_sliderMaxInt);
+            
+            Rect valGradientRect = listLeft.GetRect(12f);
+            Widgets.DrawTextureFitted(
+                valGradientRect,
+                SettingsHelper.GenerateValueGradient((int)vROffsetLeft.width - 12, 12),
+                1.0f);
+            #endregion
             
             listLeft.End();
             Widgets.EndScrollView();
-        }
-        
-        public override string SettingsCategory()
-        {
-            return "PW_ModName".Translate();
         }
     }
 }

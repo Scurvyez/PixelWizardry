@@ -2,15 +2,13 @@
 
 ## About
 
-Pixel Wizardry (PW) is a RimWorld mod that does two things. Firstly, it makes the game more accessible to those with color blindness. Secondly, it acts as a framework for other modders by introducing new shaders for their mods and textures. These new shaders for use by other modders primarily consist of effects similar to Photoshop's blending modes such as Linear Burn and Multiply. PW was born out of a desire to see more people enjoy RimWorld in its full glory and as a means of practicing shader development for myself. The base game does not account for color blindness at all and with how popular RimWorld has become I thought it was only appropriate to fix that.
+Pixel Wizardry (PW) is a RimWorld mod. It primarily acts as a framework for other modders by introducing new shaders which can be used as fullscreen or thing-specific effects. PW was born out of a desire to practice shader development for myself.
 
 ## Goals
 
-1. More accessibility options for the in-game map view (Protanopia, Protanomaly, Deuteranopia, Deuteranomaly, Tritanopia, Tritanomaly, Achromatopsia, and Achromatomaly color blind modes). [DONE] 
-2. Modder texture versatility (Linear Dodge, Linear Burn, Multiply, Screen, Subtract, RGB to HSV, Transparent RGB to Grayscale, and Transparent RGB to Black shaders). [DONE]
-3. Full-screen shader for enhanced control of Hue, Saturation, and Value. [DONE]
-4. Add color blind functionality to all GUI elements as well.
-5. Suggestions welcome!
+1. Modder texture versatility (Linear Dodge, Linear Burn, Multiply, Screen, Subtract, RGB to HSV, Transparent RGB to Grayscale, and Transparent RGB to Black shaders). [DONE]
+2. Full-screen shader for enhanced control of Hue, Saturation, and Value. [DONE]
+3. Suggestions welcome!
 
 ## How-to-Use
 

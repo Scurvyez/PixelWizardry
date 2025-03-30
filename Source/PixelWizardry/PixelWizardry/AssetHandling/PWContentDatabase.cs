@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Verse;
@@ -13,6 +14,7 @@ namespace PixelWizardry
         private const string _rootPathUnlit = "Assets/Shaders/Unlit";
         
         // thing specific (ideally lol)
+        public static readonly Shader BlendChromaticAberration = LoadShader(Path.Combine(_rootPathUnlit, "BlendChromaticAberration.shader"));
         public static readonly Shader BlendHardLight = LoadShader(Path.Combine(_rootPathUnlit, "BlendHardLight.shader"));
         public static readonly Shader BlendLinearBurn = LoadShader(Path.Combine(_rootPathUnlit, "BlendLinearBurn.shader"));
         public static readonly Shader BlendLinearDodge = LoadShader(Path.Combine(_rootPathUnlit, "BlendLinearDodge.shader"));
@@ -29,6 +31,7 @@ namespace PixelWizardry
         public static readonly Shader RGBToHSV = LoadShader(Path.Combine(_rootPathUnlit, "RGBToHSV.shader"));
         
         // fullscreen effects
+        public static readonly Shader ScreenChromaticAberration = LoadShader(Path.Combine(_rootPathUnlit, "ScreenChromaticAberration.shader"));
         public static readonly Shader ScreenHSV = LoadShader(Path.Combine(_rootPathUnlit, "ScreenHSV.shader"));
         
         // testing textures
@@ -39,29 +42,48 @@ namespace PixelWizardry
             get
             {
                 if (_bundleInt != null) return _bundleInt;
-                _bundleInt = PWMod.PW_Mod.MainBundle;
-                //PWLog.Message("[PWContentDatabase.LoadShader] bundleInt: " + _bundleInt.name);
-                return _bundleInt;
+                try
+                {
+                    _bundleInt = PWMod.PW_Mod.MainBundle;
+                    if (_bundleInt == null)
+                    {
+                        throw new Exception("MainBundle is null.");
+                    }
+                    return _bundleInt;
+                }
+                catch (Exception ex)
+                {
+                    PWLog.Warning($"Failed to load AssetBundle. " +
+                                  $"Exception: {ex.Message}");
+                    return null;
+                }
             }
         }
         
         private static Shader LoadShader(string shaderName)
         {
             _lookupShaders ??= new Dictionary<string, Shader>();
-            if (!_lookupShaders.ContainsKey(shaderName))
+            try
             {
-                _lookupShaders[shaderName] = PWBundle.LoadAsset<Shader>(shaderName);
+                if (!_lookupShaders.ContainsKey(shaderName))
+                {
+                    _lookupShaders[shaderName] = PWBundle.LoadAsset<Shader>(shaderName);
+                }
+                
+                Shader shader = _lookupShaders[shaderName];
+                if (shader == null)
+                {
+                    throw new Exception($"Shader '{shaderName}' " +
+                                        $"is null after loading.");
+                }
+                return shader;
             }
-            
-            Shader shader = _lookupShaders[shaderName];
-            if (shader == null)
+            catch (Exception ex)
             {
-                PWLog.Warning($"[PWContentDatabase.LoadShader] Failed to load shader: {shaderName}");
+                PWLog.Warning($"Failed to load shader: {shaderName}. " +
+                              $"Exception: {ex.Message}");
                 return ShaderDatabase.DefaultShader;
             }
-            
-            PWLog.Message($"[PWContentDatabase.LoadShader] Successfully loaded shader: {shaderName}");
-            return shader;
         }
     }
 }

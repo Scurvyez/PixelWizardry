@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3060506864
+CRC: 3742874191
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a61daf11299e332e548befe32a04954d
+    Hash: 32df517497e67815278e3da04ef5e15b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 55d48f4ad9c3b13330b9eb5ee5686477
@@ -16,6 +16,7 @@ Assets:
 - Assets/Shaders/Unlit/BlendLinearDodge.shader
 - Assets/Shaders/Unlit/Cutout_LUT.shader
 - Assets/Shaders/Unlit/BlendLinearBurn.shader
+- Assets/Shaders/Unlit/ScreenChromaticAberration.shader
 - Assets/Shaders/Unlit/BlendVividLight.shader
 - Assets/Shaders/Unlit/BlendMultiply.shader
 - Assets/Shaders/Unlit/BlendOverlay.shader
@@ -25,6 +26,7 @@ Assets:
 - Assets/Shaders/Unlit/BlendScreen.shader
 - Assets/Shaders/Unlit/BlendHardLight.shader
 - Assets/Shaders/Unlit/BlendTransparentRGBToBlack.shader
+- Assets/Shaders/Unlit/BlendChromaticAberration.shader
 - Assets/Shaders/Unlit/BlendSubtract.shader
 - Assets/Shaders/Unlit/BlendSoftLight.shader
 - Assets/Shaders/Unlit/BlendTransparentSepiaTone.shader
